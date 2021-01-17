@@ -1,4 +1,36 @@
+body {
+  background-color: white;
+  font-family: 'Assistant', sans-serif;
+  color: black;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+
 .navbar-brand img {
   max-height: 40px;
+}
+
+.btn-navbar-right {
+  margin-top: -10px !important;
+  margin-bottom: -10px !important;
+  margin-right: 0px !important;
+  height: 66px;
+  border-radius: 0;
+}
+
+.btn-login {
+  background-color: green;
+  color: white;
+}
+
+.btn-login:hover {
+  background-color: #17ad17;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */
