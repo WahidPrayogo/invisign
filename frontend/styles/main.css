@@ -33,4 +33,34 @@ body {
   background-color: #17ad17;
   color: white;
 }
+
+header {
+  padding: 180px 0 165px;
+  margin-top: -66px;
+  background-image: url("../images/Header_image.jpg");
+  background-size: cover;
+}
+
+header h1, header p {
+  color: white;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+}
+
+header p {
+  font-size: 22px;
+}
+
+header .btn-choose {
+  background-color: green;
+  color: white;
+}
+
+header .btn-choose:hover {
+  background-color: #17ad17;
+  color: white;
+}
 /*# sourceMappingURL=main.css.map */

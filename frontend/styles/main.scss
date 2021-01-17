@@ -4,6 +4,8 @@ body {
     color: black;
 }
 
+// Navbar
+
 .navbar-light {
     .navbar-nav {
         .nav-link {
@@ -38,5 +40,38 @@ body {
     &:hover {
         background-color: rgb(23, 173, 23);
         color: white;
+    }
+}
+
+// Header
+
+header {
+    padding: 180px 0 165px;
+    margin-top: -66px;
+    background-image: url('../images/Header_image.jpg');
+    background-size: cover;
+
+    h1, p {
+        
+        color: white;
+    }
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    .btn-choose {
+        background-color: green;
+        color: white;
+    
+        &:hover {
+            background-color: rgb(23, 173, 23);
+            color: white;
+        }
     }
 }
