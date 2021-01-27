@@ -46,7 +46,7 @@ body {
 // Header
 
 header {
-    padding: 180px 0 165px;
+    padding: 180px 0 140px;
     margin-top: -66px;
     background-image: url('../images/Header_image.jpg');
     background-size: cover;
@@ -58,11 +58,11 @@ header {
 
     h1 {
         font-family: 'Playfair Display', serif;
-        font-size: 50px;
+        font-size: 40px;
     }
 
     p {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .btn-choose {
@@ -74,4 +74,127 @@ header {
             color: white;
         }
     }
+}
+
+//Our Product
+.section-ourprod {
+    padding : 50px 0 50px;
+    font-family: 'Assistant', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    
+    .section-ourprod-heading {
+        padding: 0px 0 50px;
+    }
+    
+    .section-ourprod-invite {
+    
+        h1 {
+            font-size: 32px;
+        }
+
+        p{
+            font-size: 24px;
+            font-weight: normal;
+        }
+    }
+
+    .section-ourprod-prod {
+        text-align-last: right;
+        h1 {
+            font-size: 32px;
+        }
+
+        p{
+            font-size: 24px;
+            font-weight: normal;
+        }
+    }
+
+    .card-ourprod {
+        min-height: 250px;
+        background-color: black;
+        margin-bottom: 20px;
+        color: white;  
+    }
+
+    .btn-cataloginvitation {
+        background-color: green;
+        color: white;
+    
+        &:hover {
+            background-color: rgb(23, 173, 23);
+            color: white;
+        }
+    }
+}
+
+// Our Package
+.section-package{
+    background-color: white;
+    .card-our-package {
+        margin: 5px 5px 5px 5px;
+        min-height: 450px;
+        background-color: #EBF5FB;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 10px;
+        
+        .disc-title {
+            width: 75%;
+            background-color: #F39C12 ;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .package-title {
+            padding: 30px 0 0 0 ;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .feature-info {
+            li {
+                list-style: none;
+            }
+        }
+
+        hr {
+            margin : 70px 10px 10px 10px;
+        }
+
+        .price {
+            text-align: center;
+            padding: 10px 0 10px 0;
+            h5 {
+                text-decoration: line-through;
+                color: grey;
+            }
+
+            p {
+                font-size: 32px;
+                font-weight: bold;
+            }
+        }
+        .btn-package {
+            //margin: 10px 0px 5px 0px;
+            background-color: green;
+            color: white;
+            border-radius: unset;
+            
+            &:hover {
+                background-color: rgb(23, 173, 23);
+                color: white;
+            }
+        }
+    
+    }
+}
+
+//Footer
+
+.footer {
+    background-color: grey;
 }

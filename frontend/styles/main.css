@@ -35,7 +35,7 @@ body {
 }
 
 header {
-  padding: 180px 0 165px;
+  padding: 180px 0 140px;
   margin-top: -66px;
   background-image: url("../images/Header_image.jpg");
   background-size: cover;
@@ -47,11 +47,11 @@ header h1, header p {
 
 header h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 header p {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 header .btn-choose {
@@ -62,5 +62,123 @@ header .btn-choose {
 header .btn-choose:hover {
   background-color: #17ad17;
   color: white;
+}
+
+.section-ourprod {
+  padding: 50px 0 50px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.section-ourprod .section-ourprod-heading {
+  padding: 0px 0 50px;
+}
+
+.section-ourprod .section-ourprod-invite h1 {
+  font-size: 32px;
+}
+
+.section-ourprod .section-ourprod-invite p {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.section-ourprod .section-ourprod-prod {
+  text-align-last: right;
+}
+
+.section-ourprod .section-ourprod-prod h1 {
+  font-size: 32px;
+}
+
+.section-ourprod .section-ourprod-prod p {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.section-ourprod .card-ourprod {
+  min-height: 250px;
+  background-color: black;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.section-ourprod .btn-cataloginvitation {
+  background-color: green;
+  color: white;
+}
+
+.section-ourprod .btn-cataloginvitation:hover {
+  background-color: #17ad17;
+  color: white;
+}
+
+.section-package {
+  background-color: white;
+}
+
+.section-package .card-our-package {
+  margin: 5px 5px 5px 5px;
+  min-height: 450px;
+  background-color: #EBF5FB;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.section-package .card-our-package .disc-title {
+  width: 75%;
+  background-color: #F39C12;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section-package .card-our-package .package-title {
+  padding: 30px 0 0 0;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.section-package .card-our-package .feature-info li {
+  list-style: none;
+}
+
+.section-package .card-our-package hr {
+  margin: 70px 10px 10px 10px;
+}
+
+.section-package .card-our-package .price {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+.section-package .card-our-package .price h5 {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.section-package .card-our-package .price p {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.section-package .card-our-package .btn-package {
+  background-color: green;
+  color: white;
+  border-radius: unset;
+}
+
+.section-package .card-our-package .btn-package:hover {
+  background-color: #17ad17;
+  color: white;
+}
+
+.footer {
+  background-color: grey;
 }
 /*# sourceMappingURL=main.css.map */
