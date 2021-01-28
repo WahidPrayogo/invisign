@@ -115,7 +115,12 @@ header .btn-choose:hover {
 }
 
 .section-package {
+  padding: 0 0 30px 0;
   background-color: white;
+}
+
+.section-package .title-section {
+  padding: 0 0 30px 0;
 }
 
 .section-package .card-our-package {
@@ -133,8 +138,8 @@ header .btn-choose:hover {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .section-package .card-our-package .package-title {
@@ -148,8 +153,12 @@ header .btn-choose:hover {
   list-style: none;
 }
 
+.section-package .card-our-package .feature-info .fa-check-circle {
+  color: green;
+}
+
 .section-package .card-our-package hr {
-  margin: 70px 10px 10px 10px;
+  margin: 20px 10px 10px 10px;
 }
 
 .section-package .card-our-package .price {
@@ -179,6 +188,28 @@ header .btn-choose:hover {
 }
 
 .footer {
-  background-color: grey;
+  background-color: #404040;
+  color: white;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.footer .site-feature {
+  text-align: left;
+}
+
+.footer li {
+  list-style: none;
+}
+
+.footer li .title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer .site-copyright {
+  padding-bottom: 10PX;
+  text-align: center;
+  opacity: 50%;
 }
 /*# sourceMappingURL=main.css.map */

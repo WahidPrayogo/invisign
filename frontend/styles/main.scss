@@ -131,7 +131,11 @@ header {
 
 // Our Package
 .section-package{
+    padding: 0 0 30px 0; 
     background-color: white;
+    .title-section {
+        padding : 0 0 30px 0;
+    }
     .card-our-package {
         margin: 5px 5px 5px 5px;
         min-height: 450px;
@@ -145,7 +149,7 @@ header {
             text-align: center;
             font-size: 18px;
             font-weight: bold;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
         .package-title {
@@ -159,10 +163,14 @@ header {
             li {
                 list-style: none;
             }
+
+            .fa-check-circle {
+                color: green;
+            }
         }
 
         hr {
-            margin : 70px 10px 10px 10px;
+            margin : 20px 10px 10px 10px;
         }
 
         .price {
@@ -196,5 +204,27 @@ header {
 //Footer
 
 .footer {
-    background-color: grey;
+    background-color: #404040;
+    color: white;
+    font-style: italic;
+    font-size: 12px;
+    
+    .site-feature {
+        text-align: left;
+        
+    }
+    li {
+        list-style: none;
+        
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .site-copyright {
+        padding-bottom: 10PX;
+        text-align: center;
+        opacity: 50%;
+    }
 }
