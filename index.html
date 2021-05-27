@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invisign</title>
+    <title>Invisign - Jasa Pembuatan Design</title>
     <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="frontend/styles/main.css">
+    <link rel="shortcut icon" href="frontend/images/Icon Invisign_Icon Colored.png" />
 </head>
 <body>
   <!-- Navbar -->
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand ms-3" href="#">
-        <img src="frontend/images/LogoVisQ.jpg" alt="Logo Invisign">
-        Invisign
+        <img src="frontend/images/Icon Invisign_Icon Horizontal Colored.png" alt="Logo Invisign">
       </a>
       <button 
       class="navbar-toggler navbar-toggler-right me-3" 
@@ -24,8 +24,9 @@
         data-bs-toggle="collapse" 
         data-bs-target="#navb"
       >
-        <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
       </button>
+      
       
       <div class="collapse navbar-collapse" id="navb">
         <ul class="navbar-nav ms-auto mr-3">
@@ -37,14 +38,33 @@
                 data-bs-toggle="dropdown">
               Produk
             </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Design Undangan</a>
-              <a class="dropdown-item" href="#">Design Produk</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Design Invitation &raquo;</a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="#" >Static Invitation</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" >Video Invitation</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" >Website Invitation</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Design Produk</a>
+                </li>
+                </ul>
+
           </li>
           <li class="nav-item mx-md-2">
             <a class="nav-link" href="#">Promo</a>
+          </li>
+          <li class="nav-item mx-md-2">
+            <a class="nav-link" href="#">Cek pesanan</a>
           </li>
         </ul>  
         <!-- Mobile Button -->
@@ -59,7 +79,7 @@
       </div>
     </nav>
   </div>
-
+  
   <!-- Header -->
   <header>
     <div class="container">
@@ -253,22 +273,38 @@
   </section>
 
   <!-- Tesimoni -->
-  <section class="section-testi">
+  <section class="section-testimonial-heading" id="testimonialHeading">
     <div class="container">
       <div class="row">
-        <div class="col-4">
-          <div class="testi-photo">
-
-          </div>
-          <div class="testi-comment">
-  
-          </div> 
+        <div class="col text-center">
+          <h2>They're Loving Us</h2>
+          <p>lorem ipsum dolor</p>
         </div>
-        
       </div>
     </div>
   
   </section>
+
+  <div class="section-testimonial-content" id="testimonialContent">
+    <div class="container">
+      <div class="section-popular-travel row justify-content-center">
+        <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="card card-testimonial text-center">
+            <div class="testimonial-content">
+              <img src="frontend/images/Icon Invisign_Icon Horizontal Colored.png" alt="" class="mb-4 rounded-circle">
+              <h3 class="mb-4">Default</h3>
+              <p class="testimonial">
+                hay
+              </p>
+            </div>
+            <hr>
+            <p class="trip-to mt-2">trip to </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="footer ">
     <div class="container">
