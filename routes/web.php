@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DinvitationController;
 use App\Http\Controllers\DproductController;
 use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\Admin\ProductDetailController;
 //use App\Http\Controllers\SordersController;
 /*
 |--------------------------------------------------------------------------
@@ -28,10 +29,13 @@ Route::get('/orders', [OrdersController::class,'index'])->name('orders');
 Route::get('/orders/sukses', [OrdersController::class,'success'])->name('orders-success');
 
 Route::prefix('admin')
-    ->namespace('Admin')
+    //->namespace('Admin')
     ->middleware(['auth','admin'])
     ->group(function() {
         Route::get('/', [DashboardController::class,'index'])->name('dashboard');
+
+        Route::resource('product-detail', ProductDetailController::class);
+    
     });
 Auth::routes(['verify' => true]);
 
