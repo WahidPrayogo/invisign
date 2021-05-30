@@ -28,7 +28,11 @@ Route::get('/orders', [OrdersController::class,'index'])->name('orders');
 Route::get('/orders/sukses', [OrdersController::class,'success'])->name('orders-success');
 
 Route::prefix('admin')
-    //->namespace('Admin')
+    ->namespace('Admin')
+    ->middleware(['auth','admin'])
     ->group(function() {
         Route::get('/', [DashboardController::class,'index'])->name('dashboard');
     });
+Auth::routes(['verify' => true]);
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
