@@ -7,6 +7,7 @@ use App\Http\Controllers\DinvitationController;
 use App\Http\Controllers\DproductController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\Admin\ProductDetailController;
+use App\Http\Controllers\Admin\GalleryController;
 //use App\Http\Controllers\SordersController;
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,8 @@ Route::prefix('admin')
         Route::get('/', [DashboardController::class,'index'])->name('dashboard');
 
         Route::resource('product-detail', ProductDetailController::class);
+
+        Route::resource('gallery', GalleryController::class);
     
     });
 Auth::routes(['verify' => true]);

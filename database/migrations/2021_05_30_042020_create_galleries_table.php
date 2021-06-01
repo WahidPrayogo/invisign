@@ -15,7 +15,7 @@ class CreateGalleriesTable extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('produc_details_id');
+            $table->integer('product_details_id');
             $table->text('image');
             $table->softDeletes();
             $table->timestamps();

@@ -53,7 +53,7 @@
 
     <!-- Nav Item - Gallery Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="#" >
+        <a class="nav-link" href="{{ route('gallery.index')}}" >
         <i class="fas fa-fw fa-wrench"></i>
         <span>Gallery</span>
         </a>
