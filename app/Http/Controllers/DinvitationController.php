@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProductDetail;
 use Illuminate\Http\Request;
 
 class DinvitationController extends Controller
 {
     public function index(Request $request)
     {
-        return view('pages.dinvitation');
+        $items = ProductDetail::with(['galleries'])->get();
+        return view('pages.dinvitation',[
+            'items' => $items
+        ]);
     }
 }

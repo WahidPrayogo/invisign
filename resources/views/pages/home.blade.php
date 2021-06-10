@@ -8,27 +8,27 @@
     
     <!-- Header -->
     <header>
-        <div class="container">
-        <div class="row align-item-center">
-            <div class="col-lg-6">
-            <h1>
-            Turn your ideas into reality,<br />
-            Make your own personal <br /> 
-            Design
-            </h1>
-            <br />
-            <p>
-                Yuk Order Segera Sebelum Berakhir Masa Promonya
-            <p>
-            <p class="count">
-                10 Hari 10 Jam 10 Menit 10 Detik
-            <p>
-            <a href="" class="btn btn-choose px-4 mt-4">Pilih Sekarang</a>
-            </div>
-            <div class="col-lg-6">
-            
-            </div>
-        </div> 
+        <div class="container header-highlight">
+            <div class="row align-item-center">
+                <div class="col-lg-6">
+                <h1>
+                Turn your ideas into reality,<br />
+                Make your own personal <br /> 
+                Design
+                </h1>
+                <br />
+                <p>
+                    Yuk Order Segera Sebelum Berakhir Masa Promonya
+                <p>
+                <p class="countdown">
+                    10 Hari 10 Jam 10 Menit 10 Detik
+                <p>
+                <a href="#Package" class="btn btn-choose px-4 mt-4">Pesan Sekarang</a>
+                </div>
+                <div class="col-lg-6">
+                
+                </div>
+            </div> 
         </div>
     </header>
 
@@ -80,7 +80,7 @@
     </section>
 
     <!-- Paket -->
-    <section class="section-package">
+    <section class="section-package" id="Package">
         <div class="container">
         <div class="row">
             <div class="text-center title-section ">

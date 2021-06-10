@@ -35,19 +35,20 @@
                 <div class="section-package-list col-lg-4">
                   <div class="card-our-package">
                     <div class="package-title px-2">
-                      Title Product
+                      {{ $items->title}}
                     </div>
                     <br />
-                    <div class="text-center" >
-                      <img src="frontend\images\Icon Invisign_Icon Black.png" alt="" width="50%" >
+                    <img src="" alt="">
+                    <div class="text-center">
+                      <img src="{{ $items->galleries->count() ? Storage::url
+                      ($items->galleries->first()->image) : 'frontend\images\Icon Invisign_Icon Black.png' }}" width="75%">
                     </div>
                     <hr>
                     <div class="price">
                       Mulai dari
-                      <h5>Rp. 00.000,-</h5>
-                      <p> Rp.0.000,- </p>
+                      <h5>Rp. {{ $items->price}},-</h5>
+                      <p> Rp. {{ $items->price}},- </p>
                     </div>
-                    <a href="" class="btn btn-package d-flex flex-column invisible">Pesan Sekarang</a>
                   </div>
                 </div>
                 <div class="section-package-list col-lg">
@@ -69,12 +70,12 @@
                       </div>
                       <div class="col-lg details-orders">
                         <ul>
-                          <li>Product Name </li>
-                          <li>Price</li>
+                          <li>{{ $item->product_detail->title}} </li>
+                          <li>{{ $item->product_detail->price}}</li>
                           <li>Disc</li>
                           <li>unique number</li>
                           <hr>
-                          <li>Total</li>
+                          <li>{{ $item->product_detail->title}}</li>
                         </ul>
                       </div>
                     </div>
@@ -86,7 +87,10 @@
                         BNI XXXXXXX
                       </p>
                     </div>
-                    <a href="{{ route('orders-success')}}" class="btn btn-package d-flex flex-column">Konfirmasi Pesanan </a>
+                    <a href="{{ route('orders-success', $item->id)}}" 
+                      class="btn btn-package d-flex flex-column">Konfirmasi Pesanan </a>
+                    <a href="{{ route('dinvitation')}}" 
+                      class="btn btn-package d-flex flex-column">batalkan Pesanan </a>
                   </div>
                 </div>
               </div>

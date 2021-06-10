@@ -54,6 +54,10 @@ body {
   display: block;
 }
 
+.header-highlight {
+  background-color: #0caaf3;
+}
+
 header {
   padding: 180px 0 140px;
   margin-top: -110px;

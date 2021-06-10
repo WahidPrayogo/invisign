@@ -12,7 +12,7 @@
         <h1>Yay Success</h1>
         <img src="{{ url('frontend\images\Icon Invisign_Icon Black.png')}}" alt="" width="10%" >
         <p>Selemat pesanan anda sukses</p>
-        <a href="{{ url('/')}}" class="btn btn-home-page mt-3 px-5">Kembali</a>
+        <a href="{{ route('home')}}" class="btn btn-home-page mt-3 px-5">Kembali</a>
       </div>
     </div>
   </main>

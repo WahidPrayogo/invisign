@@ -61,7 +61,7 @@
 
     <!-- Nav Item - Transaction Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" >
+        <a class="nav-link collapsed" href="{{ route('transaction.index')}}" >
         <i class="fas fa-fw fa-folder"></i>
         <span>Transaksi</span>
         </a>
@@ -69,6 +69,14 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Nav Item - Go to Web Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{ route('home')}}" >
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Go to Web</span>
+        </a>
+    </li>
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
