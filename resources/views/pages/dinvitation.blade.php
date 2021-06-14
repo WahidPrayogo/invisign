@@ -5,26 +5,14 @@
 @endsection
 
 @section('content')
-  <section class="section-dinvitation-header"></section>
-  <section class="section-dinvitation-content">
+  <section class="section-detail-product">
     <div class="container">
       <div class="row">
-        <div class="col p-0">
-          <nav>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">Product</li>
-              <li class="breadcrumb-item active">Design Invitation</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-      <div class="row">
         <div class="col-lg pl-lg-0">
-          <div class="card card-details">
-            <section class="section-package">
+            <section class="section-product">
               <div class="container">
                 <div class="row">
-                  <div class="text-center title-section ">
+                  <div class="text-center title ">
                     <h1>Catalog Design Invitation</h1>
                   </div>
                 </div>     
@@ -32,35 +20,33 @@
               <div class="container">
                 <div class="row">
                   @foreach ($items as $item)
-                    <div class="section-package-list col-lg-4">
-                      <div class="card-our-package">
-                        <div class="package-title px-2">
+                    <div class="product-list col-lg-4 d-flex">
+                      <div class=" detail-product ">
+                        <div class="product-title">
                           {{ $item->title}}
                         </div>
-                        <br />
-                        <img src="" alt="">
-                        <div class="text-center">
+                        <div class="card-body flex-fill text-center">
                           <img src="{{ $item->galleries->count() ? Storage::url
-                          ($item->galleries->first()->image) : 'frontend\images\Icon Invisign_Icon Black.png' }}" width="75%">
+                          ($item->galleries->first()->image) : 'frontend\images\Icon_B.png' }}" 
+                          class="img-detail">
                         </div>
-                        <hr>
-                        <div class="price">
+                        <div class="price ">
                           Mulai dari
                           <h5>Rp. {{ $item->price}},-</h5>
                           <p> Rp. {{ $item->price}},- </p> 
                         </div>
-                        <div class="pesan">
+                        <div class="pesan  ">
                           @auth
                             <form action="{{ route('orders_process', $item->id) }}" method="POST">
                               @csrf
-                              <button class="btn btn-block btn-package d-flex flex-column" type="submit">
-                                Pesan Sekarang
+                              <button class="btn btn-order w-100 " type="submit">
+                                Pesan Sekarang &nbsp;<i class="fa fa-shopping-cart"></i>
                               </button>
                             </form>
                           @endauth
                           @guest
-                            <a href="{{ route('login')}}" class="btn btn-package d-flex flex-column">
-                              Login/Register untuk Pesan
+                            <a href="{{ route('login')}}" class="btn btn-order w-100">
+                              Login/Register untuk Pesan &nbsp;<i class="fa fa-user"></i>
                             </a>                               
                           @endguest
                         </div>
@@ -71,7 +57,6 @@
                 </div>
               </div>
             </section>
-          </div>
         </div>
       </div>
     </div>

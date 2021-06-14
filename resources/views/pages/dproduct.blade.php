@@ -5,166 +5,60 @@
 @endsection
 
 @section('content')
-<section class="section-dinvitation-header"></section>
-<section class="section-dinvitation-content">
-  <div class="container">
-    <div class="row">
-      <div class="col p-0">
-        <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">Product</li>
-            <li class="breadcrumb-item active">Design Invitation</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg pl-lg-0">
-        <div class="card card-details">
-          <section class="section-package">
-            <div class="container">
-              <div class="row">
-                <div class="text-center title-section ">
-                  <h1>Catalog Design Invitation</h1>
-                </div>
-              </div>     
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="section-package-list col-lg-4">
-                  <div class="card-our-package">
-                    <div class="package-title px-2">
-                      Title Product
-                    </div>
-                    <br />
-                    <div class="text-center" >
-                      <img src="frontend\images\Icon Invisign_Icon Black.png" alt="" width="50%" >
-                    </div>
-                    <hr>
-                    <div class="price">
-                      Mulai dari
-                      <h5>Rp. 00.000,-</h5>
-                      <p> Rp.0.000,- </p>
-                    </div>
-                    <a href="" class="btn btn-package d-flex flex-column">Pesan Sekarang</a>
+  <section class="section-detail-product">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg pl-lg-0">
+            <section class="section-product">
+              <div class="container">
+                <div class="row">
+                  <div class="text-center title ">
+                    <h1>Catalog Design Product</h1>
                   </div>
-                </div>
-                <div class="section-package-list col-lg-4">
-                  <div class="card-our-package">
-                    <div class="package-title px-2">
-                      Title Product
+                </div>     
+              </div>
+              <div class="container">
+                <div class="row">
+                  @foreach ($items as $item)
+                    <div class="product-list col-lg-4 d-flex">
+                      <div class=" detail-product ">
+                        <div class="product-title">
+                          {{ $item->title}}
+                        </div>
+                        <div class="card-body flex-fill text-center">
+                          <img src="{{ $item->galleries->count() ? Storage::url
+                          ($item->galleries->first()->image) : 'frontend\images\Icon_B.png' }}" 
+                          class="img-detail">
+                        </div>
+                        <div class="price ">
+                          Mulai dari
+                          <h5>Rp. {{ $item->price}},-</h5>
+                          <p> Rp. {{ $item->price}},- </p> 
+                        </div>
+                        <div class="pesan  ">
+                          @auth
+                            <form action="{{ route('orders_process', $item->id) }}" method="POST">
+                              @csrf
+                              <button class="btn btn-order " type="submit">
+                                Pesan Sekarang &nbsp;<i class="fa fa-shopping-cart"></i>
+                              </button>
+                            </form>
+                          @endauth
+                          @guest
+                            <a href="{{ route('login')}}" class="btn btn-order">
+                              Login/Register untuk Pesan &nbsp;<i class="fa fa-user"></i>
+                            </a>                               
+                          @endguest
+                        </div>
+                        
+                      </div>
                     </div>
-                    <br />
-                    <div class="text-center" >
-                      <img src="frontend\images\Icon Invisign_Icon Black.png" alt="" width="50%" >
-                    </div>
-                    <hr>
-                    <div class="price">
-                      Mulai dari
-                      <h5>Rp. 00.000,-</h5>
-                      <p> Rp.0.000,- </p>
-                    </div>
-                    <a href="" class="btn btn-package d-flex flex-column">Pesan Sekarang</a>
-                  </div>
-                </div>
-                <div class="section-package-list col-lg-4">
-                  <div class="card-our-package">
-                    <div class="package-title px-2">
-                      Title Product
-                    </div>
-                    <br />
-                    <div class="text-center" >
-                      <img src="frontend\images\Icon Invisign_Icon Black.png" alt="" width="50%" >
-                    </div>
-                    <hr>
-                    <div class="price">
-                      Mulai dari
-                      <h5>Rp. 00.000,-</h5>
-                      <p> Rp.0.000,- </p>
-                    </div>
-                    <a href="" class="btn btn-package d-flex flex-column">Pesan Sekarang</a>
-                  </div>
+                  @endforeach
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg pl-lg-0">
-        <div class="card card-details">
-          <section class="section-package">
-            <div class="container">
-              <div class="row">
-                <div class="text-center title-section ">
-                  <h1>Catalog Design Invitation</h1>
-                </div>
-              </div>     
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="section-package-list col-lg-4">
-                  <div class="card-our-package">
-                    <div class="package-title px-2">
-                      Title Product
-                    </div>
-                    <br />
-                    <div class="text-center" >
-                      <img src="frontend\images\Icon Invisign_Icon Black.png" alt="" width="50%" >
-                    </div>
-                    <hr>
-                    <div class="price">
-                      Mulai dari
-                      <h5>Rp. 00.000,-</h5>
-                      <p> Rp.0.000,- </p>
-                    </div>
-                    <a href="" class="btn btn-package d-flex flex-column">Pesan Sekarang</a>
-                  </div>
-                </div>
-                <div class="section-package-list col-lg-4">
-                  <div class="card-our-package">
-                    <div class="package-title px-2">
-                      Title Product
-                    </div>
-                    <br />
-                    <div class="text-center" >
-                      <img src="frontend\images\Icon Invisign_Icon Black.png" alt="" width="50%" >
-                    </div>
-                    <hr>
-                    <div class="price">
-                      Mulai dari
-                      <h5>Rp. 00.000,-</h5>
-                      <p> Rp.0.000,- </p>
-                    </div>
-                    <a href="" class="btn btn-package d-flex flex-column">Pesan Sekarang</a>
-                  </div>
-                </div>
-                <div class="section-package-list col-lg-4">
-                  <div class="card-our-package">
-                    <div class="package-title px-2">
-                      Title Product
-                    </div>
-                    <br />
-                    <div class="text-center" >
-                      <img src="frontend\images\Icon Invisign_Icon Black.png" alt="" width="50%" >
-                    </div>
-                    <hr>
-                    <div class="price">
-                      Mulai dari
-                      <h5>Rp. 00.000,-</h5>
-                      <p> Rp.0.000,- </p>
-                    </div>
-                    <a href="" class="btn btn-package d-flex flex-column">Pesan Sekarang</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+  </section>
 @endsection
