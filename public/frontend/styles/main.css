@@ -1,7 +1,7 @@
 
 /* Universal */
 body {
-  background: linear-gradient(90deg, #0055b3, #0caaf3 75% );
+  background: linear-gradient(45deg, #0055b3, #0caaf3 75% );
   font-family: 'Assistant', sans-serif;
 }
 
@@ -10,12 +10,8 @@ body {
   color: white;
 }
 .navbar-light .navbar-nav .nav-link:hover {
-  color: black;
-}
-
-.navbar-light .navbar-nav .nav-link .active{
   color: white;
-  font-weight: bold;
+  border-bottom: 2px solid white;
 }
 
 .navbar-brand img {
@@ -37,23 +33,27 @@ body {
 }
 
 .dropdown-menu {
+  padding: 0.5rem;
   position: relative;
-  background-color: transparent;
+  background:  rgba(255,255,255,0.2);
   border-style: none;
   color: white;
   display: none;
 }
 
 .dropdown-item {
-  color: grey;
+  color: white;
 }
- .dropdown:hover .dropdown-menu {
-   display: block;
-   background-color: white;
- }
 
-.dropdown-menu:hover .dropdown-submenu {
-  display: block;  
+.dropdown-item:hover {
+  background:  rgba(255,255,255,0.1);
+  color: white;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  background:  rgba(255,255,255,0.2);
 }
 
 /* Header */
@@ -61,8 +61,8 @@ body {
 .header {
   background: linear-gradient(45deg, #0055b3, #0caaf3 100% );
   border-bottom-right-radius: 25% 50%;
-  padding: 180px 0 50px;
-  margin-top: -110px;
+  padding: 9rem 0 2rem;
+  margin-top: -6.5rem;
   color: white;
 }
 
@@ -74,6 +74,7 @@ body {
 .header p {
   font-size: 20px;
 }
+
 
 .btn-choose {
   background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
@@ -89,34 +90,38 @@ body {
   color: white;
 }
 
+.header .img-header {
+  margin-top: -5.5rem;
+}
+
 /* Our Product */
 
 .section-ourprod {
   background: linear-gradient(#0caaf3, #e6f4f1 100%);
   background-color: #E6F4f1;
-  padding: 50px;
-  
+  padding: 4rem 2rem 3rem;
 }
 
 .section-ourprod .title h1{
   font-family: 'Assistant', sans-serif;
   font-weight: bold;
+  color: white;
 }
 
 .section-ourprod .ourprod-inv {
-  margin: 2rem 5rem;
+  margin: 1rem 5rem;
   min-height: 250px;
-  background-color: #EBF5FB;
+  background: linear-gradient(270deg,rgba(230, 244, 241, 1) 50%,rgba(230, 244, 241, 0.5));  
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
-  border-bottom-left-radius: 15% 75%;
+  border-top-left-radius: 15% 75%;
 }
 
 .section-ourprod .ourprod-prod {
-  margin: 2rem 5rem;
+  margin: 1rem 5rem;
   min-height: 250px;
-  background-color: #EBF5FB;
+  background: linear-gradient(90deg,rgba(230, 244, 241, 1) 50%,rgba(230, 244, 241, 0.5) );
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
@@ -139,6 +144,10 @@ body {
 .section-ourprod .btn-ourprod:hover {
   background: linear-gradient(90deg, #0978f7, #0055b3 100% );
   color: white;
+}
+
+.section-ourprod .img-ourprod-inv {
+  padding: 1rem;
 }
 
 /* Package */
@@ -467,6 +476,62 @@ background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
 .section-dinvitation-content {
   margin-top: 0px;
   min-height: 100vh;
+}
+
+/* Login */
+
+
+
+.main-login {
+  margin-top: -6.5rem;
+}
+
+.card-login {
+  margin: 1rem;
+  padding: 2rem;
+  min-height: 400px;
+  background-color: #EBF5FB;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.form-label {
+  margin-top: 1rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+.form-check {
+  text-align: left;
+}
+
+.login .img-header img {
+
+  margin-left: 0rem;
+  margin-bottom: 0rem;
+}
+
+/* Register */
+
+.register {
+  background: linear-gradient(45deg, #0055b3, #0caaf3 100% );
+  
+}
+.register .card-register {
+  margin: 1rem;
+  padding: 2rem 2rem 1rem 2rem;
+  min-height: 400px;
+  background-color: #EBF5FB;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.register .form-group {
+  margin-top: 1rem;
+  text-align: left;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=main.css.map */

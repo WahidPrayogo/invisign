@@ -9,8 +9,8 @@
     <!-- Header -->
     <section class="header">
         <div class="container">
-            <div class="row align-item-center">
-                <div class="col-lg-6 col-sm-6 align-item-center">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-sm-6 ">
                     <h1>
                     Turn your ideas into reality,<br />
                     Make your own personal <br /> 
@@ -25,9 +25,9 @@
                     <p>
                     <a href="#Package" class="btn btn-choose px-4 mt-4">Pesan Sekarang</a>
                 </div>
-                <div class="col-lg-6 col-sm-6">
-                    <div class="text-center">
-                        <img src="frontend\images\Icon_C.png" alt="" class="w-75">
+                <div class="col-lg-6 col-sm-6 ">
+                    <div class="text-center img-header">
+                        <img src="frontend\images\Prod_All.png" alt="" class="w-100">
                     </div>
                 </div>
             </div> 
@@ -35,7 +35,7 @@
     </section>
 
     <!-- Our Produk -->
-    <section class="section-ourprod">
+    <section class="section-ourprod ">
         <div class="container">
             <div class="row">
                 <div class="col text-center title">
@@ -44,9 +44,9 @@
             </div>
         </div>
         <div class="container ">
-            <div class="row ourprod-inv">
-                <div class="col-sm-6 col-md-6 col-lg-6 text-center">
-                    <img src="frontend\images\Icon_C.png" alt="" class="w-50 ">
+            <div class="row ourprod-inv align-items-center">
+                <div class="col-sm-6 col-md-6 col-lg-6 text-center img-ourprod-inv">
+                    <img src="frontend\images\Prod_Invitation.png" alt="" class="w-50 ">
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="ourprod-inv-content py-3 ">
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="row ourprod-prod">
+            <div class="row ourprod-prod align-items-center">
                 <div class="col-sm-6 col-md-6 col-lg-6 ">
                     <div class="ourprod-prod-content py-3">
                         <h2>Design Product</h2></br>
@@ -71,8 +71,8 @@
                         <a href="{{ route('dproduct')}}" class="btn btn-ourprod px-4 mt-4">Lihat Katalog</a>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-6 text-center">
-                    <img src="frontend\images\Icon_C.png" alt="" class="w-50">
+                <div class="col-sm-6 col-md-4 col-lg-6 text-center img-ourprod-inv">
+                    <img src="frontend\images\Prod_Design.png" alt="" class="w-50">
                 </div>
                 </div>
             </div>

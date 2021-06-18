@@ -1,0 +1,103 @@
+<mjml>
+    <mj-body background-color="grey" 
+    font-size="13px">
+        <mj-section background-color="white"
+        padding="0px">
+            <mj-column width="50%">
+                <mj-image src="Icon_LB_C_H.png">
+            </mj-column>
+        </mj-section>
+        <mj-section background-color="white"
+        padding="0px">
+            <mj-column>
+                <mj-text align="center"
+                font-weight="bold"
+                font-size="30px" padding="2rem 2rem">
+                Here is Your Invoice
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section background-color="white"
+        padding="0px">
+            <mj-column width="100%" 
+            padding="0rem 2rem">
+                <mj-image src="Icon_LB_C_H.png">
+            </mj-column>
+        </mj-section>
+        <mj-section background-color="white"
+        padding="0px">
+            <mj-column >
+                <mj-text font-size="16px" 
+                padding="2rem 2rem 0rem">
+                Hi, <strong>Username</strong>
+                </br></br>
+                Detail Pesanan dengan No.Transaksi <strong>#SU112457</strong> 
+                </mj-text>
+                <mj-table padding="2rem 5rem">>
+                    <tr>
+                        <td>Product Name</td>
+                        <td >:&nbsp;</td>
+                        <td >Nama</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td >:&nbsp;</td>
+                        <td >Rp. 50.000,-</td>
+                    </tr>
+                    <tr>
+                        <td>Discount</td>
+                        <td >:&nbsp;</td>
+                        <td >N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Unique Number</td>
+                        <td >:&nbsp;</td>
+                        <td >5</td>
+                    </tr>
+                    <tr >
+                        <td><strong>Total</strong></td>
+                        <td><strong>:&nbsp;</strong></td>
+                        <td><strong>Rp. 50.005,-</strong></td>
+                    </tr>
+                </mj-table>
+                <mj-button align="center">
+                    Check Detail
+                </mj-button>
+            </mj-column>
+        </mj-section>
+        <mj-section background-color="white"
+        padding="0px">
+            <mj-column>
+                <mj-text 
+                font-size="16px" padding="1rem 2rem 0">
+                Butuh Bantuan ?
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section background-color="white"
+        padding="0rem 0.5rem">
+            <mj-column>
+                <mj-table >
+                    <tr>
+                        <td style="width: 50px">
+                            <img src="Icon_LB_C_H.png" width="50px">
+                        </td>
+                        <td align="">&nbsp;
+                            support@invisign.id
+                            <br>&nbsp;
+                            021-00-000-000
+                        </td>
+                    </tr>
+                </mj-table>
+            </mj-column>
+        </mj-section>
+        <mj-section 
+        padding="0rem">
+            <mj-column>
+                <mj-text align="center" >
+                <i>2021 Copyright by Invisign.my.id - All right reserved - Made in Purwokerto</i>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

@@ -13,12 +13,12 @@
         <div class="row">
                     <!-- Topbar Search -->
             <form action="{{ url('search')}}" method="GET" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                @csrf
                 <div class="input-group">
                 <input name="search" type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                 <select name="column" for="column" required class="form_control">
                     <option value="title">Title</option>
-                    <option value="type">Type</option>   
+                    <option value="type">Type</option>
+                    <option value="price">Type</option>
                 </select>
                 <div class="input-group-append">
                     <button class="btn btn-primary" type="submit">
@@ -48,11 +48,8 @@
                                     <td>{{ $item->title }}</td>
                                     <td>{{ $item->type }}</td>
                                     <td>{{ $item->about }}</td>
-                                    <td>@currency($item->price)</td>
+                                    <td>{{ $item->price }}</td>
                                     <td>
-                                        <a href="{{ route('product-detail.show', $item->id)}}" class="btn btn-success">
-                                            <i class="fa fa-eye"></i>
-                                        </a>
                                         <a href="{{ route('product-detail.edit', $item->id)}}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>

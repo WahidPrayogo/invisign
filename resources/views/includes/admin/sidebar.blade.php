@@ -4,8 +4,8 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard')}}">
-        <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-laugh-wink"></i>
+        <div class="sidebar-brand-icon ">
+        <img src="{{url('frontend\images\Icon_W.png')}}" alt=""class="w-50">
         </div>
         <div class="sidebar-brand-text mx-3">Invisign Admin</div>
     </a>
@@ -25,7 +25,7 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Interface
+        Menu
     </div>
 
     <!-- Nav Item - Produk Collapse Menu -->
@@ -36,8 +36,7 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Design Invitation</a>
+            <a class="collapse-item" href="{{ route('product-detail.index')}}">Design Invitation</a>
             <a class="collapse-item" href="cards.html">Design Produk</a>
         </div>
         </div>
@@ -54,7 +53,7 @@
     <!-- Nav Item - Gallery Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link" href="{{ route('gallery.index')}}" >
-        <i class="fas fa-fw fa-wrench"></i>
+        <i class="fa fa-image"></i>
         <span>Gallery</span>
         </a>
     </li>
@@ -62,7 +61,7 @@
     <!-- Nav Item - Transaction Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="{{ route('transaction.index')}}" >
-        <i class="fas fa-fw fa-folder"></i>
+        <i class="fa fa-credit-card"></i>
         <span>Transaksi</span>
         </a>
     </li>
@@ -73,7 +72,7 @@
     <!-- Nav Item - Go to Web Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="{{ route('home')}}" >
-        <i class="fas fa-fw fa-folder"></i>
+            <i class="fa fa-globe"></i>
         <span>Go to Web</span>
         </a>
     </li>

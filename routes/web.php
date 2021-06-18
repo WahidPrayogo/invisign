@@ -46,6 +46,8 @@ Route::get('/orders/sukses/{id}', [OrdersController::class,'success'])
         ->name('orders-success')
         ->middleware(['auth','verified']);
 
+Route::get('/search', [ProductDetailController::class,'search']);
+
 Route::prefix('admin')
     //->namespace('Admin')
     ->middleware(['auth','admin'])

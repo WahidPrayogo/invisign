@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProductDetailRequest;
 use App\Models\ProductDetail;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 use\Illuminate\Support\Str;
 
@@ -18,11 +19,26 @@ class ProductDetailController extends Controller
      */
     public function index()
     {
-        $items = ProductDetail::all();
+        $items = ProductDetail::with(['galleries'])->get();
 
         return view('pages.admin.product-detail.index',[
             'items' => $items
         ]);
+    }
+
+    public function search(){
+        
+        //menangkap data pencarian
+        $search = $_GET['search'];
+        $col = $_GET['column'];
+
+        $items = ProductDetail::where($col,'LIKE',"%".$search."%")->get();
+        //if there is relation $items = ProductDetail::where('title','LIKE',"%".$search."%")->with('galleries')->get();
+
+        return view('pages.admin.product-detail.search',[
+            'items' => $items
+        ]);
+
     }
 
     /**
@@ -58,7 +74,17 @@ class ProductDetailController extends Controller
      */
     public function show($id)
     {
-        //
+        $item = ProductDetail::with(['galleries'])->findOrfail($id);
+
+        //return $item;
+
+        return view('pages.admin.product-detail.detail',[
+            'item' => $item
+        ]);
+
+        //return view('pages.admin.gallery.index',[
+        //    'items' => $items
+        //]);
     }
 
     /**
@@ -74,6 +100,11 @@ class ProductDetailController extends Controller
         return view('pages.admin.product-detail.edit',[
             'item' => $item
         ]);
+    }
+
+    public function detail($id)
+    {
+       
     }
 
     /**

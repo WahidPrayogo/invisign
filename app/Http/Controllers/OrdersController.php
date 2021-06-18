@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
+use App\Mail\TransactionSuccess;
+
 use App\Models\Transaction;
 use App\Models\ProductDetail;
 
@@ -41,10 +44,19 @@ class OrdersController extends Controller
 
     public function success(Request $request, $id)
     {
-        $transaction = Transaction::findOrFail($id);
+        $transaction = Transaction::with(['product_detail.galleries', 'user'])
+            ->findOrFail($id);
         $transaction->transaction_status = 'PENDING';
 
         $transaction->save(); 
+
+        //highlight_string("<?php\n\$data =\n" . var_export($transaction, true) . ";\n ? >");
+        //return $transaction;
+
+        // Kirim Email Ke User Invoicenya
+        Mail::to($transaction->user)->send(
+            new TransactionSuccess($transaction)
+        );
 
         return view('pages.sorders');
     }
