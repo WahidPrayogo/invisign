@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\TransactionRequest;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
-use\Illuminate\Support\Str;
+use Illuminate\Support\Str;
 
 
 class TransactionController extends Controller
@@ -18,10 +19,32 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        $items = Transaction::with([
-            'product_detail', 'user'
-        ])->get();
+        $items = Transaction::with(['product_detail','user'])
+            //->get();    
+            ->simplepaginate(10);
 
+        //return $items;
+        
+        return view('pages.admin.transaction.index',[
+            'items' => $items
+        ]);
+    }
+
+    public function search(){
+        
+        //menangkap data pencarian
+        $search = $_GET['search'];
+        $col = $_GET['column'];
+
+        $items = Transaction::
+            join('product_details','product_details.id', 'transactions.product_details_id')
+            ->join('users','users.id', 'transactions.users_id')
+            ->where($col,'LIKE',"%".$search."%")
+            ->simplepaginate(10);
+            //->get();
+        //if there is relation $items = ProductDetail::where('title','LIKE',"%".$search."%")->with('galleries')->get();
+
+        //return $items;
         return view('pages.admin.transaction.index',[
             'items' => $items
         ]);

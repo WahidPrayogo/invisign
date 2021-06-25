@@ -2,7 +2,7 @@
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light ">
         <a class="navbar-brand ms-3" href="{{ route('home')}}">
-            <img src="{{ url('frontend/images/Icon_LW_C_H.png')}}" alt="Logo Invisign">
+            <img src="{{ url('frontend/images/Icon_LW_C_H.png')}}" alt="Logo Invisign" class="align-items-center w-50">
         </a>
         <button 
             class="navbar-toggler navbar-toggler-right me-3" 
@@ -34,13 +34,9 @@
                     </ul>
                 </li>
                 <li class="nav-item mx-md-2">
-                    <a class="nav-link" href="#Package">Promo</a>
+                    <a class="nav-link" href="{{ route('home')}}/#Package">Promo</a>
                 </li>
-                <li class="nav-item mx-md-2">
-                    <a class="nav-link" href="#">Cek pesanan</a>
-                </li>
-
-                <div class="topbar-divider d-none d-sm-block"></div>
+                
               
             
             @guest
@@ -59,7 +55,11 @@
             
              
             @auth
-                
+            <li class="nav-item mx-md-2">
+                <a class="nav-link" href="{{ route('myorder.index')}}">Cek pesanan</a>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
                 <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

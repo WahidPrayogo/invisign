@@ -32,8 +32,8 @@
                         </div>
                         <div class="price ">
                           Mulai dari
-                          <h5>Rp. {{ $item->price}},-</h5>
-                          <p> Rp. {{ $item->price}},- </p> 
+                          <h5>@currency($item->price)</h5>
+                          <p> @currency($item->price - ($item->product_type->product_discount->amount*$item->price)) </p> 
                         </div>
                         <div class="pesan  ">
                           @auth

@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProductDetailRequest;
 use App\Models\ProductDetail;
+use App\Models\ProductType;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
-use\Illuminate\Support\Str;
+use Illuminate\Support\Str;
+
 
 
 class ProductDetailController extends Controller
@@ -19,7 +21,7 @@ class ProductDetailController extends Controller
      */
     public function index()
     {
-        $items = ProductDetail::with(['galleries'])->get();
+        $items = ProductDetail::with(['galleries','product_type'])->simplepaginate(10);
 
         return view('pages.admin.product-detail.index',[
             'items' => $items
@@ -31,14 +33,15 @@ class ProductDetailController extends Controller
         //menangkap data pencarian
         $search = $_GET['search'];
         $col = $_GET['column'];
-
-        $items = ProductDetail::where($col,'LIKE',"%".$search."%")->get();
+        
+        $items = ProductDetail::where($col,'LIKE',"%".$search."%")
+            ->simplepaginate(10);
         //if there is relation $items = ProductDetail::where('title','LIKE',"%".$search."%")->with('galleries')->get();
+        //return $items;
 
-        return view('pages.admin.product-detail.search',[
+        return view('pages.admin.product-detail.index',[
             'items' => $items
         ]);
-
     }
 
     /**
@@ -74,7 +77,7 @@ class ProductDetailController extends Controller
      */
     public function show($id)
     {
-        $item = ProductDetail::with(['galleries'])->findOrfail($id);
+        $item = ProductDetail::with(['galleries','product_type'])->findOrfail($id);
 
         //return $item;
 
@@ -96,17 +99,15 @@ class ProductDetailController extends Controller
     public function edit($id)
     {
         $item = ProductDetail::findOrfail($id);
+        $product_types = ProductType::all();
 
         return view('pages.admin.product-detail.edit',[
-            'item' => $item
+            'item' => $item,
+            'product_types' => $product_types
         ]);
     }
 
-    public function detail($id)
-    {
-       
-    }
-
+    
     /**
      * Update the specified resource in storage.
      *
@@ -123,6 +124,7 @@ class ProductDetailController extends Controller
         
         $item->update($data);
 
+        //return $data;  
         return redirect()->route('product-detail.index');
     }
 

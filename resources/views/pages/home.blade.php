@@ -9,7 +9,7 @@
     <!-- Header -->
     <section class="header">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center py-5 ">
                 <div class="col-lg-6 col-sm-6 ">
                     <h1>
                     Turn your ideas into reality,<br />
@@ -35,7 +35,7 @@
     </section>
 
     <!-- Our Produk -->
-    <section class="section-ourprod ">
+    <section class="section-ourprod " id="Ourprod">
         <div class="container">
             <div class="row">
                 <div class="col text-center title">
@@ -89,112 +89,37 @@
             </div>    
         </div>
         <div class="container">
-        <div class="row">
-            <div class="package-list col-sm-6 col-lg-3 text-center pb-4">
-                <div class="card-our-package text-center">
-                    <div class="disc-title p-2">
-                    Discount 10%
+            <div class="row justify-content-center">
+                
+                @foreach ($items as $item)
+                <div class="package-list col-sm-6 col-lg-3 text-center pb-4">
+                    <div class="card-our-package text-center">
+                        <div class="disc-title p-2">
+                        Discount {{ $item->product_discount->amount*100}}&nbsp;%
+                        </div>
+                        <div class="package-title px-2">
+                        Paket <br>{{ $item->title}}
+                        </div>
+                        <br />
+                        <div class="feature-info">
+                        <ul>
+                            <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_1}}</li>
+                            <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_2}}</li>
+                            <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_3}}</li>
+                            <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_4}}</li>
+                        </ul>
+                        </div>
+                        <hr>
+                        <div class="price">
+                        Mulai dari
+                        <h5>Rp. 100.000</h5>
+                        <p> Rp. 80.000 </p>
+                        </div>
+                        <a href="#Ourprod" class="btn btn-package px-5">Pesan Sekarang&nbsp;<i class="fa fa-shopping-cart"></i></a>
                     </div>
-                    <div class="package-title px-2">
-                    Paket Undangan <br /> Statis
-                    </div>
-                    <br />
-                    <div class="feature-info">
-                    <ul>
-                        <li><i class="fa fa-check-circle"></i>&nbsp;Format File .jpg</li>
-                        <li><i class="fa fa-check-circle"></i>&nbsp;Free Revisi Minor</li>
-                        <li><i class="fa fa-check-circle"></i>&nbsp;Max 1 Foto</li>
-                        <li>&nbsp;</li>
-                    </ul>
-                    </div>
-                    <hr>
-                    <div class="price">
-                    Mulai dari
-                    <h5>Rp. 100.000,-</h5>
-                    <p> Rp.80.000,- </p>
-                    </div>
-                    <a href="{{ route('dinvitation')}}" class="btn btn-package px-5">Pesan Sekarang&nbsp;<i class="fa fa-shopping-cart"></i></a>
                 </div>
+                @endforeach
             </div>
-            <div class="section-package-list col-sm-6 col-lg-3">
-            <div class="card-our-package text-center">
-                <div class="disc-title p-2">
-                Discount 10%
-                </div>
-                <div class="package-title px-2">
-                Paket Undangan <br /> Video
-                </div>
-                <br />
-                <div class="feature-info">
-                <ul>
-                    <li><i class="fa fa-check-circle"></i>&nbsp;Format File .mp4</li>
-                    <li><i class="fa fa-check-circle"></i>&nbsp;Free Revisi Minor</li>
-                    <li><i class="fa fa-check-circle"></i>&nbsp;Max 8 Foto</li>
-                    <li>&nbsp;</li>
-                </ul>
-                </div>
-                <hr>
-                <div class="price">
-                Mulai dari
-                <h5>Rp. 100.000,-</h5>
-                <p> Rp.80.000,- </p>
-                </div>
-                <a href="{{ route('dinvitation')}}" class="btn btn-package px-5">Pesan Sekarang&nbsp;<i class="fa fa-shopping-cart"></i></a>
-            </div>
-            </div>
-            <div class="section-package-list col-sm-6 col-lg-3 ">
-            <div class="card-our-package text-center ">
-                <div class="disc-title p-2">
-                Discount 10%
-                </div>
-                <div class="package-title px-2">
-                Paket Undangan <br /> Website
-                </div>
-                <br />
-                <div class="feature-info">
-                <ul>
-                    <li><i class="fa fa-check-circle"></i>&nbsp;Semua Fitur</li>
-                    <li><i class="fa fa-check-circle"></i>&nbsp;subdomain.invisign.my.id</li>
-                    <li><i class="fa fa-check-circle"></i>&nbsp;Max 10 Foto</li>
-                    <li><i class="fa fa-check-circle"></i>&nbsp;Aktif 3 Bulan</li>
-                </ul>
-                </div>
-                <hr>
-                <div class="price">
-                Mulai dari
-                <h5>Rp. 100.000,-</h5>
-                <p> Rp.80.000,- </p>
-                </div>
-                <a href="{{ route('dinvitation')}}" class="btn btn-package  px-5">Pesan Sekarang&nbsp;<i class="fa fa-shopping-cart"></i></a>
-            </div>
-            </div>
-            <div class="section-package-list col-sm-6 col-lg-3">
-            <div class="card-our-package text-center">
-                <div class="disc-title p-2">
-                Discount 10%
-                </div>
-                <div class="package-title px-2">
-                Paket Design  <br /> Produk
-                </div>
-                <br />
-                <div class="feature-info">
-                <ul>
-                    <li><i class="fa fa-check-circle"></i>&nbsp;Format File .jpg</li>
-                    <li><i class="fa fa-check-circle"></i>&nbsp;Free Revisi Minor</li>
-                    <li><i class="fa fa-check-circle"></i>&nbsp;Full Custom</li>
-                    <li>&nbsp;</li>
-                </ul>
-                </div>
-                <hr>
-                <div class="price">
-                Mulai dari
-                <h5>Rp. 100.000,-</h5>
-                <p> Rp.80.000,- </p>
-                </div>
-                <a href="{{ route('dproduct')}}" class="btn btn-package px-5">Pesan Sekarang&nbsp;<i class="fa fa-shopping-cart"></i></a>
-            </div>
-            </div>
-        </div>
         </div>
     </section>
 

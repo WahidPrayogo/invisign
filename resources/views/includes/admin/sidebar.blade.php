@@ -50,6 +50,20 @@
         </a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('product-type.index')}}" >
+        <i class="fas fa-fw fa-wrench"></i>
+        <span>Product Type</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('product-discount.index')}}" >
+        <i class="fas fa-fw fa-wrench"></i>
+        <span>Product Disc</span>
+        </a>
+    </li>
+
     <!-- Nav Item - Gallery Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link" href="{{ route('gallery.index')}}" >
@@ -63,6 +77,13 @@
         <a class="nav-link collapsed" href="{{ route('transaction.index')}}" >
         <i class="fa fa-credit-card"></i>
         <span>Transaksi</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{ route('testimony.index')}}" >
+        <i class="fa fa-credit-card"></i>
+        <span>Testimony</span>
         </a>
     </li>
 

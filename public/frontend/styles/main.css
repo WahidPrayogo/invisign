@@ -1,7 +1,7 @@
 
 /* Universal */
 body {
-  background: linear-gradient(45deg, #0055b3, #0caaf3 75% );
+  background: linear-gradient(90deg, #0055b3, #0caaf3 100% );
   font-family: 'Assistant', sans-serif;
 }
 
@@ -14,8 +14,8 @@ body {
   border-bottom: 2px solid white;
 }
 
-.navbar-brand img {
-  max-height: 80px;
+.navbar-brand {
+  padding: 2rem 0;
 }
 
 .btn-login {
@@ -57,12 +57,11 @@ body {
 }
 
 /* Header */
-
 .header {
-  background: linear-gradient(45deg, #0055b3, #0caaf3 100% );
+  background: linear-gradient(90deg, #0055b3, #0caaf3 100% );
   border-bottom-right-radius: 25% 50%;
-  padding: 9rem 0 2rem;
-  margin-top: -6.5rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
   color: white;
 }
 
@@ -97,21 +96,20 @@ body {
 /* Our Product */
 
 .section-ourprod {
-  background: linear-gradient(#0caaf3, #e6f4f1 100%);
-  background-color: #E6F4f1;
+  background-color: #e6f4f1;
   padding: 4rem 2rem 3rem;
 }
 
 .section-ourprod .title h1{
   font-family: 'Assistant', sans-serif;
   font-weight: bold;
-  color: white;
+  
 }
 
 .section-ourprod .ourprod-inv {
   margin: 1rem 5rem;
   min-height: 250px;
-  background: linear-gradient(270deg,rgba(230, 244, 241, 1) 50%,rgba(230, 244, 241, 0.5));  
+  background: white;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
@@ -121,7 +119,7 @@ body {
 .section-ourprod .ourprod-prod {
   margin: 1rem 5rem;
   min-height: 250px;
-  background: linear-gradient(90deg,rgba(230, 244, 241, 1) 50%,rgba(230, 244, 241, 0.5) );
+  background: white;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
@@ -164,7 +162,7 @@ body {
 
 .section-package .card-our-package {
   min-height: 450px;
-  background-color: #EBF5FB;
+  background-color: white;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
@@ -173,7 +171,7 @@ body {
 
 .section-package .card-our-package .disc-title {
   width: 75%;
-background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
+  background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -236,7 +234,7 @@ background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
 /* Product Detail*/
 
 .section-detail-product {
-  background-color: #e6f4f1;
+  background-color:  #ececf8;
 }
 
 .section-product {
@@ -302,7 +300,7 @@ background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
 /* Orders Product */
 
 .section-detail-order {
-  background-color: #e6f4f1;
+  background-color:  #ececf8;
 }
 
 .section-order {
@@ -409,7 +407,8 @@ background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
 /* Testimoni*/
 
 .section-testimonial {
-  background: linear-gradient( #e6f4f1, #0caaf3, #0055b3);
+  background: #ececf8;
+  
   padding: 50px;
 }
 
@@ -422,6 +421,9 @@ background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
 
 .section-testimonial-content .card-testimonial {
   padding: 25px 20px 10px 20px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
   border-radius: 11px;
   margin-bottom: 20px;
 }
@@ -447,7 +449,6 @@ background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
 /* Footer */
 
 .footer {
-  background-color: #0055b3;
   color: white;
   font-style: italic;
   font-size: 12px;
@@ -480,16 +481,13 @@ background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
 
 /* Login */
 
-
-
 .main-login {
-  margin-top: -6.5rem;
+  padding-top: 0rem;
 }
 
 .card-login {
   margin: 1rem;
   padding: 2rem;
-  min-height: 400px;
   background-color: #EBF5FB;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -534,4 +532,9 @@ background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
   font-weight: bold;
 }
 
+/* My Order */
+
+.section-myorder {
+  background-color:  #ececf8;
+}
 /*# sourceMappingURL=main.css.map */

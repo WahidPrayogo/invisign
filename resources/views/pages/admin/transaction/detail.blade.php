@@ -18,10 +18,9 @@
                 @endforeach
             </ul>
         </div>
-        
-            
         @endif
-            
+
+        <!-- Content Detail --> 
         <div class="card shadow">
             <div class="card-body">
                 <table class="table table-bordered">
@@ -39,15 +38,29 @@
                     </tr>
                     <tr>
                         <th>Total</th>
-                        <td>Rp. {{ $item->transaction_total }}</td>
+                        <td>@currency($item->transaction_total)</td>
                     </tr>      
                     <tr>
                         <th>Status Transaksi</th>
                         <td>{{ $item->transaction_status }}</td>
                     </tr>
                 </table>
+
+                <!-- Nav -->
+                <div class="button-nav">
+                    <div class="row justify-content-center">
+                        <a href="{{ route('transaction.index')}}" class="btn btn-primary px-md-5">
+                            <i class="fa fa-arrow-left"></i>
+                        </a>
+                        &nbsp;&nbsp;
+                        <a href="{{ route('transaction.edit', $item->id)}}" class="btn btn-info px-md-5">
+                            <i class="fa fa-pencil-alt"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
     <!-- /.container-fluid -->
     

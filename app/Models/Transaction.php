@@ -13,7 +13,7 @@ class Transaction extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'product_details_id', 'users_id', 'transaction_total', 'transaction_status'
+        'product_details_id', 'users_id', 'transaction_total', 'transaction_status', 'bukti_transfer'
     ];
 
     protected $hidden = [
@@ -27,5 +27,9 @@ class Transaction extends Model
 
     public function user(){
         return $this->belongsTo(User::class, 'users_id', 'id');  //relation
+    }
+
+    public function testimony(){
+        return $this->HasOne(Testimony::class, 'transactions_id', 'id'); 
     }
 }

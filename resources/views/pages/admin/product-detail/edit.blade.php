@@ -36,6 +36,17 @@
                         <input type="text" class="form-control" name="type" placeholder="Type" value="{{ $item->type }}">
                     </div>
                     <div class="form-group">
+                        <label for="product_types_id">Produk</label>
+                        <select name="product_types_id" required class="form_control">
+                            <option value="{{ $item->product_types_id ?? ''}}">{{ $item->product_type->title ?? 'Pilih Type Produk'}}</option>
+                            @foreach ($product_types as $product_type)
+                                <option value="{{ $product_type->id}}">
+                                    {{ $product_type->title}}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="about">About</label>
                         <textarea name="about" rows="5" class="d-block w-100 form-control">{{ $item->about }}</textarea>
                     </div>

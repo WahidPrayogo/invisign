@@ -24,6 +24,7 @@ class OrdersController extends Controller
         return view('pages.orders',[
             'item' => $item,
             'items' => $items
+            
         ]);
     }
 
@@ -34,10 +35,13 @@ class OrdersController extends Controller
         $transaction = Transaction::create([
             'product_details_id' => $id, 
             'users_id' => Auth::user()->id, 
-            'transaction_total' => $product_detail->price, 
+            'transaction_total' => $product_detail->price - (
+                                    $product_detail->price * 
+                                    $product_detail->product_type->product_discount->amount),
             'transaction_status' => 'IN_CART',
         ]);
 
+        //return $transaction;
         return redirect()->route('orders', $id);
 
     }

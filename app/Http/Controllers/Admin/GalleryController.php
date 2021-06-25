@@ -19,8 +19,26 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $items = Gallery::with(['product_detail'])->get();
+        $items = Gallery::with(['product_detail'])
+            ->simplepaginate(10);
 
+        return view('pages.admin.gallery.index',[
+            'items' => $items
+        ]);
+    }
+
+    public function search(){
+        
+        //menangkap data pencarian
+        $search = $_GET['search'];
+        $col = $_GET['column'];
+
+        $items = Gallery::
+            join('product_details','product_details.id', 'galleries.product_details_id')
+            ->where($col,'LIKE',"%".$search."%")
+            ->simplepaginate(10);
+        
+        //return $items;
         return view('pages.admin.gallery.index',[
             'items' => $items
         ]);

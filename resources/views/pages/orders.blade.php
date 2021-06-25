@@ -56,7 +56,7 @@
                           <tr>
                             <th scope="row">Dicsount / Promo </th>
                             <td class="col-1 text-center">:</td>
-                            <td>N/A</td>
+                            <td>{{$item->product_detail->product_type->product_discount->amount*100 ?? 'N/A'}}%</td>
                           </tr>
                           <tr>
                             <th scope="row">Unique Number </th>
@@ -66,7 +66,8 @@
                           <tr>
                             <th scope="row">Total</th>
                             <td class="col-1 text-center">:</td>
-                            <td>Rp.&nbsp;{{ $item->product_detail->price}},-</td>
+                            <td>@currency($item->product_detail->price -
+                              ($item->product_detail->price * $item->product_detail->product_type->product_discount->amount))</td>
                           </tr>
                         </tbody>
                       </table>
