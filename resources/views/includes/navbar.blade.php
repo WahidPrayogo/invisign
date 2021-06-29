@@ -24,13 +24,10 @@
                         data-bs-toggle="dropdown">
                     Produk
                     </a>
-                    <ul class="dropdown-menu ">
-                        <li>
+                    <ul class="dropdown-menu dropdown-menu-right  ">
+                        
                         <a class="dropdown-item" href="{{ route('dinvitation')}}">Design Invitation</a>
-                        </li>
-                        <li>
                         <a class="dropdown-item" href="{{ route('dproduct')}}">Design Produk</a>
-                        </li>
                     </ul>
                 </li>
                 <li class="nav-item mx-md-2">
@@ -63,8 +60,8 @@
                 <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }} &nbsp;<i class="fa fa-user"></i></span>
-                            <img class="img-profile rounded-circle" src="">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }} &nbsp;</i></span>
+                            <img class="img-profile rounded-circle " height="40" src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -72,14 +69,9 @@
                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                             Profile
                             </a>
-                            <a class="dropdown-item" href="#">
-                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                            Settings
-                            </a>
-
                             @if(Auth::check() && Auth::user()->roles == "ADMIN")
                                 <a class="dropdown-item" href="{{ url('admin')}}">
-                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <i class="fas fa-tasks fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Dashboard Admin
                                 </a>
                             @endif
@@ -87,13 +79,13 @@
                             <!-- Mobile Button -->
                             <form class="form-inline d-sm-block d-md-none" action="{{ url('logout')}}" method="POST">
                                 @csrf
-                                <button class="btn btn-login my-2 my-sm-0" type="submit">Keluar &nbsp;<i class="fa fa-user"></i></button>
+                                <button class="btn btn-logout my-2 my-sm-0" type="submit"><i class="fa fa-sign-out"></i>&nbsp;Keluar</button>
                             </form>
                             
                             <!-- Desktop Button -->
                             <form class="form-inline my-2 my-lg-0 d-none d-md-block" id="logout" action="{{ url('logout')}}" method="POST">
                                 @csrf
-                                <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4" type="submit">Keluar &nbsp;<i class="fa fa-user"></i></button>
+                                <button class="btn btn-logout btn-navbar-right my-2 my-sm-0 px-3 w-100" type="submit"><i class="fa fa-sign-out"></i>&nbsp;Keluar</button>
                             </form>  
                         </div>
                     </li>

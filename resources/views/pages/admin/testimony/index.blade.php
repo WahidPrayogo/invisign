@@ -5,15 +5,16 @@
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
-        <!-- Page Heading -->
-        <div class="d-sm-flex justify-content-right mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Transaksi</h1>
-        </div>
+       
 
         <!-- Page Content -->
         <div class="card shadow">
             <div class="card-body">
-            
+             <!-- Page Heading -->
+                <div class="d-sm-flex justify-content-center m-4 p-3">
+                    <h1 class="h3 mb-0 text-gray-800">Daftar Testimony</h1>
+                </div>
+                <hr>
                 <!-- Table Content -->
                 <div class="row">
                     <div class="card-body">

@@ -9,7 +9,7 @@
 <section class="section-myorder detail">
     
     <!-- Begin Page Content -->
-    <div class="container py-2">
+    <div class="container p-5">
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -22,12 +22,13 @@
         @endif
 
         <!-- Content Detail --> 
-        <div class="card shadow m-5">
-            <div class="card-body">
+        <div class="card shadow body">
+            <div class="body-bg">
+            <div class="card-body ">
             
                 <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-center ">
-                    <h1 class="h3 mb-0 mt-3 text-gray-800"> Detail Transaksi {{ $item->user->name }}</h1>
+                    <h1 class="h3 mb-0 mt-3 text-gray-800"> Detail Transaksi {{ $item->id }}</h1>
                 </div>
                 
                 <!-- Content -->
@@ -69,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-
+            
             </div>
 
             <!-- Nav -->
@@ -87,8 +88,9 @@
                     
                 </div>
             </div>
+        
         </div>
-
+    </div>
     </div>
     <!-- /.container-fluid -->
 </section>

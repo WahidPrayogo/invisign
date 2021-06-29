@@ -5,15 +5,17 @@
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
-        <!-- Page Heading -->
-        <div class="d-sm-flex justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Daftar Design Undangan</h1>
-        </div>
+        
 
         <!-- Page Content -->
         <div class="card shadow">
             <div class="card-body">
-                
+                                
+                <!-- Page Heading -->
+                <div class="d-sm-flex justify-content-center m-4 py-3">
+                    <h1 class="h3 mb-0 text-gray-800">Daftar Design Undangan</h1>
+                </div>
+                <hr>
                 <!-- Topbar Search -->
                 <div class="row">
                     <div class="col-md-6 d-flex align-items-center">
@@ -23,7 +25,8 @@
                                 <select name="column" for="column" required class="form-control input-group-pend">
                                     <option value="title">Nama Produk</option>
                                     <option value="type">Jenis</option>
-                                    <option value="price">Harga</option>   
+                                    <option value="price">Harga</option> 
+                                    <option value="product_types.title">Type Product</option>  
                                 </select>
                                 <input name="search" type="text" class="form-control bg-light border-1 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
@@ -48,9 +51,7 @@
                                     <tr class="text-center">
                                         <th>No</th>
                                         <th>Nama Produk</th>
-                                        <th>Jenis</th>
                                         <th>Type</th>
-                                        <th>Keterangan</th>
                                         <th>Harga</th>
                                         <th>Discount</th>
                                         <th>Action</th>
@@ -61,11 +62,9 @@
                                     <tr>
                                         <td class="text-center">{{ $items->firstItem() + $no }}</td>
                                         <td>{{ $item->title }}</td>
-                                        <td>{{ $item->type }}</td>
                                         <td>{{ $item->product_type->title ?? 'N/A'}}</td>
-                                        <td>{{ $item->about }}</td>
                                         <td>@currency($item->price)</td>
-                                        <td>{{ $item->product_type->product_discount->amount*100 }}%</td>
+                                        <td class="text-center">{{ $item->product_type->product_discount->amount*100 }}%</td>
                                         <td class="text-center">
                                             <a href="{{ route('product-detail.show', $item->id)}}" class="btn btn-primary">
                                                 <i class="fa fa-eye"></i>

@@ -5,10 +5,7 @@
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
-        <!-- Page Heading -->
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800"> Detail Produk Type {{ $item->title }}</h1>      
-        </div>
+
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -23,9 +20,14 @@
         <!-- Content Detail -->
         <div class="card shadow">
             <div class="card-body">
-                
+
+                        <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-center m-4 p-3">
+                    <h1 class="h3 mb-0 text-gray-800"> Detail Produk Type {{ $item->title }}</h1>      
+                </div>
+                <hr>
                 <!-- Detail -->
-                <div class="row">
+                <div class="row justify-content-center">
                     
                     <!-- Table Detail -->
                     <div class="col-md-8">
@@ -45,7 +47,7 @@
                                     {{ $item->feature_2 }}</br>
                                     {{ $item->feature_3 }}</br>
                                     {{ $item->feature_4 }}</br>
-                                    {{ $item->feature_5 }}</br>
+                                    {{ $item->initial_price }}</br>
                                 </td>
                             </tr>
                             <tr>

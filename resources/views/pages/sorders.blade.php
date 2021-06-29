@@ -9,9 +9,10 @@
 <main>
     <div class="section-success d-flex align-items-center">
       <div class="content-success col text-center">
-        <h1>Yay Success</h1>
-        <img src="{{ url('frontend\images\Icon_B.png')}}" alt="" width="10%" >
-        <p>Selemat pesanan anda sukses</p>
+        <h1>Terimakasih</h1>
+        <img src="{{ url('frontend\images\Icon_B.png')}}" alt="" width="10%" class="my-3">
+        <p>Selemat pesanan anda telah kami terima</p>
+        <p>Silahkan cek Email untuk melihat detail pemesanan</p>
         <a href="{{ route('home')}}" class="btn btn-success  mt-3 px-5">Kembali</a>
       </div>
     </div>

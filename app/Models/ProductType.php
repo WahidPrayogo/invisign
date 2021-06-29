@@ -14,7 +14,7 @@ class ProductType extends Model
     
     protected $fillable = [
         'product_discounts_id', 'title', 'feature_1', 'feature_2', 'feature_3',
-        'feature_4', 'feature_5'
+        'feature_4', 'initial_price'
     ];
 
     protected $hidden = [
@@ -26,6 +26,6 @@ class ProductType extends Model
     }
 
     public function product_detail(){
-        return $this->hasMany(ProductDetail::class, 'product_details_id', 'id');
+        return $this->belongsTo(ProductDetail::class, 'product_details_id', 'id');
     }
 }

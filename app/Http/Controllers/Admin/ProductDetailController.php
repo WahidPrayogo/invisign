@@ -51,7 +51,11 @@ class ProductDetailController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.product-detail.create');
+        $product_types = ProductType::all();
+        
+        return view('pages.admin.product-detail.create', [
+            'product_types' => $product_types
+        ]);
     }
 
     /**

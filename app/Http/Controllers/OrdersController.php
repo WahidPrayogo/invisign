@@ -34,7 +34,7 @@ class OrdersController extends Controller
 
         $transaction = Transaction::create([
             'product_details_id' => $id, 
-            'users_id' => Auth::user()->id, 
+            'users_id' => Auth::user()->id,
             'transaction_total' => $product_detail->price - (
                                     $product_detail->price * 
                                     $product_detail->product_type->product_discount->amount),

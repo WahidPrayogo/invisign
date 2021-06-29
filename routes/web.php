@@ -35,11 +35,9 @@ Route::resource('myorder', MyOrdersController::class);
 
 Route::get('/myorder/cancel', [MyOrdersController::class,'cancel'])->name('cancel');
 
-
 Route::post('/testi/{id}', [MyTestimonyController::class,'process'])->name('testi-process');
 
-Route::get('/testi/{id}', [MyTestimonyController::class,'index'])
-        ->name('add');
+Route::get('/testi/{id}', [MyTestimonyController::class,'index'])->name('add');
 
 //Route::post('/myorders/testi/add/{id}', [MyOrdersController::class,'uptesti'])
   //      ->name('up');

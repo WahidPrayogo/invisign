@@ -30,7 +30,7 @@ class ProductTypeRequest extends FormRequest
             'feature_2' => 'required|max:255', 
             'feature_3' => 'max:255',
             'feature_4' => 'max:255', 
-            'feature_5' => 'max:255'
+            'initial_price' => 'integer'
         ];
     }
 }

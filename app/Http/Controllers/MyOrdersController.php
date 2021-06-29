@@ -7,7 +7,7 @@ use App\Models\Testimony;
 use App\Models\ProductDetail;
 
 use App\Http\Requests\Admin\TransactionRequest;
-use App\Http\Requests\Admin\TestimonyRequest;
+//use App\Http\Requests\Admin\TestimonyRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,12 +21,16 @@ class MyOrdersController extends Controller
     public function index(Request $request)
     {
         $userId = Auth::user()->id;
-        $items = Transaction::with(['product_detail','user','testimony'])
+        $items = Transaction::with(['product_detail','user'])
+                // /->join('testimonies','transactions_id','transactions.id')
                 ->where('users_id','=',$userId)->simplepaginate(10);
         //$item = Testimony::with(['transaction'])-           
        //var_dump ($items);
+
+       //$testi = Testimony::with(['transaction'])->get();
         return view('pages.myorders',[
-            'items' => $items           
+            'items' => $items
+            //'testi' => $testi         
         ]);
     }
 

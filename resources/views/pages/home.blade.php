@@ -20,8 +20,9 @@
                     <p>
                         Yuk Order Segera Sebelum Berakhir Masa Promonya
                     <p>
-                    <p class="countdown">
-                        10 Hari 10 Jam 10 Menit 10 Detik
+                        
+                    <p id="demo" class="countdown">
+                        
                     <p>
                     <a href="#Package" class="btn btn-choose px-4 mt-4">Pesan Sekarang</a>
                 </div>
@@ -44,36 +45,39 @@
             </div>
         </div>
         <div class="container ">
-            <div class="row ourprod-inv align-items-center">
-                <div class="col-sm-6 col-md-6 col-lg-6 text-center img-ourprod-inv">
-                    <img src="frontend\images\Prod_Invitation.png" alt="" class="w-50 ">
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                <div class="ourprod-inv-content py-3 ">
-                    <h2> Design Invitation </h2></br>
-                    <p> Saatnya beralih ke undangan digital.<br />
-                    Invisign siap membantu anda sebarkan kabar bahagiamu.<br />
-                    </p>
-                    <a href="{{ route('dinvitation')}}" class="btn btn-ourprod px-4 mt-4">Lihat Katalog</a>
-                </div>
+            <div class="ourprod-inv">
+                <div class="row ourprod-inv-bg align-items-center">
+                    <div class="col-sm-6 col-md-6 col-lg-6 text-center img-ourprod-inv">
+                        <img src="frontend\images\Prod_Invitation.png" alt="" class="">
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <div class="ourprod-inv-content py-3 ">
+                            <h2> Design Invitation </h2></br>
+                            <p> Saatnya beralih ke undangan digital.<br />
+                            Invisign siap membantu anda sebarkan kabar bahagiamu.<br />
+                            </p>
+                            <a href="{{ route('dinvitation')}}" class="btn btn-ourprod px-4 mt-4">Lihat Katalog&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row ourprod-prod align-items-center">
-                <div class="col-sm-6 col-md-6 col-lg-6 ">
-                    <div class="ourprod-prod-content py-3">
-                        <h2>Design Product</h2></br>
-                        <p>
-                        Personalisasikan produk anda.<br />
-                        Dengan design yang premium dan elegan.<br />
-                        </p>
-                        <a href="{{ route('dproduct')}}" class="btn btn-ourprod px-4 mt-4">Lihat Katalog</a>
+            <div class="ourprod-prod">
+                <div class="row ourprod-prod-bg align-items-center">    
+                    <div class="col-sm-6 col-md-6 col-lg-6 ">
+                        <div class="ourprod-prod-content py-3">
+                            <h2>Design Product</h2></br>
+                            <p>
+                            Personalisasikan produk anda.<br />
+                            Dengan design yang premium dan elegan.<br />
+                            </p>
+                            <a href="{{ route('dproduct')}}" class="btn btn-ourprod px-4 mt-4"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;&nbsp;Lihat Katalog</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-6 text-center img-ourprod-inv">
-                    <img src="frontend\images\Prod_Design.png" alt="" class="w-50">
-                </div>
+                    <div class="col-sm-6 col-md-4 col-lg-6 text-center img-ourprod-inv">
+                        <img src="frontend\images\Prod_Design.png" alt="" class="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,39 +87,41 @@
     <section class="section-package" id="Package">
         <div class="container">
             <div class="row">
-                <div class="text-center title pb-5">
+                <div class="text-center title">
                     <h1>Pilih Paket</h1>
                 </div>
             </div>    
         </div>
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt-5">
                 
                 @foreach ($items as $item)
                 <div class="package-list col-sm-6 col-lg-3 text-center pb-4">
-                    <div class="card-our-package text-center">
-                        <div class="disc-title p-2">
-                        Discount {{ $item->product_discount->amount*100}}&nbsp;%
+                    <div class="card-our-package text-center" >
+                        <div class="card-our-package-bg">
+                            <div class="package-title px-2">
+                                Paket <br>{{ $item->title}}
+                            </div>
+                            <br />
+                            <div class="feature-info py-2">
+                                <ul>
+                                    <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_1}}</li>
+                                    <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_2}}</li>
+                                    <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_3}}</li>
+                                </ul>
+                            </div>
+                            <hr >
+                            <div class="disc-title text-center">
+                                <p>{{ $item->product_discount->amount*100}}&nbsp;%<br>OFF
+                                </p>
+                            </div>
+                            <div class="price my-2">
+                            Mulai dari
+                            <h5>@currency($item->initial_price)</h5>
+                            <p>@currency($item->initial_price-($item->initial_price*$item->product_discount->amount ))</p>
+                            </div>
+                            <a href="#Ourprod" class="btn btn-package ">Pesan Sekarang&nbsp;<i class="fa fa-shopping-cart"></i></a>
                         </div>
-                        <div class="package-title px-2">
-                        Paket <br>{{ $item->title}}
-                        </div>
-                        <br />
-                        <div class="feature-info">
-                        <ul>
-                            <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_1}}</li>
-                            <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_2}}</li>
-                            <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_3}}</li>
-                            <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_4}}</li>
-                        </ul>
-                        </div>
-                        <hr>
-                        <div class="price">
-                        Mulai dari
-                        <h5>Rp. 100.000</h5>
-                        <p> Rp. 80.000 </p>
-                        </div>
-                        <a href="#Ourprod" class="btn btn-package px-5">Pesan Sekarang&nbsp;<i class="fa fa-shopping-cart"></i></a>
                     </div>
                 </div>
                 @endforeach
@@ -128,23 +134,25 @@
         <div class="container">
         <div class="row">
             <div class="col text-center">
-                <h2>They're Loving Us</h2>
+                <h2>Thanks for supporting Us</h2>
             </div>
         </div>
         </div>
-        <div class="section-testimonial-content mt-4" id="testimonialContent">
+        <div class="section-testimonial-content mt-5" id="testimonialContent">
             <div class="container">
                 <div class="section-popular-travel row justify-content-center">
+                    @foreach ($testi as $testi)
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
-                            <img class="img-profile rounded-circle center mx-auto" src="frontend\images\Icon_N.png" alt="">
-                            <p class="testimonial mt-4">
-                                "Good, Easy Process and Reliable"
-                            </p>
-                            <hr>
-                            <p class="username">by username </p>
+                            <img class="img-profile rounded-circle center mx-auto" src="https://ui-avatars.com/api/?name={{$testi->transaction->user->username}}" alt="">
+                            <div class="testimonial pb-md-1 pt-md-5 mb-md-3 mx-md-1">
+                            <p class="px-3">"&nbsp;{{ $testi->testimony}}&nbsp;"</p>
+                            <p class="username">{{ $testi->transaction->user->name}}</p>
+                            </div>
                         </div>
                     </div>
+                    @endforeach
+                    
                 </div>
             </div>
         </div>

@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.login')
+
+@section('title')
+    Invisign - Reset Password
+@endsection
 
 @section('content')
 <div class="container">

@@ -1,8 +1,7 @@
  <!-- Footer -->
- <footer class="footer ">
+ <footer class="footer pt-3">
     <div class="container">
         <div class="site-feature py-2">
-            <hr>
             <div class="row">
             <div class="col-3 text-left footer-features">
                 <ul>

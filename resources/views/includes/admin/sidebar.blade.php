@@ -35,41 +35,25 @@
         <span>Produk</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="{{ route('product-detail.index')}}">Design Invitation</a>
-            <a class="collapse-item" href="cards.html">Design Produk</a>
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('product-detail.index')}}" >
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Details</span>
+                </a>
+                <a class="collapse-item" href="{{ route('product-type.index')}}" >
+                    <i class="fa fa-list-alt"></i>
+                    <span>Type</span>
+                </a>
+                <a class="collapse-item" href="{{ route('product-discount.index')}}" >
+                    <i class="fa fa-tag"></i>
+                    <span>Discount</span>
+                </a>
+                <a class="collapse-item" href="{{ route('gallery.index')}}" >
+                    <i class="fa fa-image"></i>
+                    <span>Gallery</span>
+                </a>
+            </div>
         </div>
-        </div>
-    </li>
-
-    <!-- Nav Item - Product Detail Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('product-detail.index')}}" >
-        <i class="fas fa-fw fa-wrench"></i>
-        <span>Product Details</span>
-        </a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('product-type.index')}}" >
-        <i class="fas fa-fw fa-wrench"></i>
-        <span>Product Type</span>
-        </a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('product-discount.index')}}" >
-        <i class="fas fa-fw fa-wrench"></i>
-        <span>Product Disc</span>
-        </a>
-    </li>
-
-    <!-- Nav Item - Gallery Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('gallery.index')}}" >
-        <i class="fa fa-image"></i>
-        <span>Gallery</span>
-        </a>
     </li>
 
     <!-- Nav Item - Transaction Collapse Menu -->
@@ -82,7 +66,7 @@
 
     <li class="nav-item">
         <a class="nav-link collapsed" href="{{ route('testimony.index')}}" >
-        <i class="fa fa-credit-card"></i>
+        <i class="fa fa-comments"></i>
         <span>Testimony</span>
         </a>
     </li>

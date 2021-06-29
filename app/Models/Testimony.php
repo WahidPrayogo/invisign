@@ -18,6 +18,6 @@ class Testimony extends Model
     ];
     
     public function transaction(){
-        return $this->HasOne(Transaction::class, 'transactions_id', 'id'); 
+        return $this->belongsTo(Transaction::class, 'transactions_id', 'id'); 
     }
 }

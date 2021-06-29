@@ -5,10 +5,7 @@
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
-        <!-- Page Heading -->
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800"> Edit Gallery</h1>      
-        </div>
+        
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -24,13 +21,18 @@
             
         <div class="card shadow">
             <div class="card-body">
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-center m-4 p-3">
+                    <h1 class="h3 mb-0 text-gray-800"> Edit Gallery</h1>      
+                </div>
+                <hr>
                 <form action="{{ route('gallery.update', $item->id)}}" method="POST" enctype="multipart/form-data">
                     @method('PUT')
                     @csrf
                     
                     <div class="form-group">
                         <label for="product_details_id">Produk</label>
-                        <select name="product_details_id" required class="form_control">
+                        <select name="product_details_id" required class="form-control">
                             <option value="{{ $item->product_details_id}}">Jangan Diubah</option>
                             @foreach ($product_details as $product_detail)
                                 <option value="{{ $product_detail->id}}">
@@ -44,7 +46,9 @@
                         <input type="file" name="image" placeholder="image" class="form-control">
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block">Ubah</button>
+                    <div class="row justify-content-center mt-4">
+                        <button type="submit" class="btn btn-primary w-25">Ubah</button>
+                    </div>
                 </form>
             </div>
         </div>
