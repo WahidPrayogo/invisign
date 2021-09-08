@@ -7,7 +7,7 @@ use App\Models\ProductType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class DproductController extends Controller
+class DesignProductController extends Controller
 {
     public function index(Request $request)
     {
@@ -16,7 +16,7 @@ class DproductController extends Controller
                 ->where('product_types.title','LIKE','%Vector%')->get();
         
 
-        return view('pages.dproduct',[
+        return view('pages.product.design-product',[
             'items' => $items
         ]);
     }

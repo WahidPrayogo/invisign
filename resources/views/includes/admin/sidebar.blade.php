@@ -71,6 +71,13 @@
         </a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{ route('user-list.index')}}" >
+        <i class="fa fa-comments"></i>
+        <span>USer List</span>
+        </a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

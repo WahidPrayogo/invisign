@@ -20,7 +20,7 @@ class MyTestimonyController extends Controller
         
         
 
-        return view('pages.testimony',[
+        return view('pages.testimony.index',[
             'item' => $item
         ]);
     }

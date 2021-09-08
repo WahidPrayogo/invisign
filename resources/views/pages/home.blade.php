@@ -9,8 +9,8 @@
     <!-- Header -->
     <section class="header">
         <div class="container">
-            <div class="row align-items-center py-5 ">
-                <div class="col-lg-6 col-sm-6 ">
+            <div class="row align-items-center py-md-5 ">
+                <div class="col-md-6">
                     <h1>
                     Turn your ideas into reality,<br />
                     Make your own personal <br /> 
@@ -26,12 +26,17 @@
                     <p>
                     <a href="#Package" class="btn btn-choose px-4 mt-4">Pesan Sekarang</a>
                 </div>
-                <div class="col-lg-6 col-sm-6 ">
+                <div class="col-md-6">
                     <div class="text-center img-header">
                         <img src="frontend\images\Prod_All.png" alt="" class="w-100">
                     </div>
                 </div>
             </div> 
+            <div class="">
+                <div class="text-center header-mobile">
+                    <img src="frontend\images\Prod_All.png" alt="" class="w-100">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -47,16 +52,16 @@
         <div class="container ">
             <div class="ourprod-inv">
                 <div class="row ourprod-inv-bg align-items-center">
-                    <div class="col-sm-6 col-md-6 col-lg-6 text-center img-ourprod-inv">
+                    <div class="col-12 col-md-6 mt-3 text-center img-ourprod-inv">
                         <img src="frontend\images\Prod_Invitation.png" alt="" class="">
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-12 col-md-6 mt-3">
                         <div class="ourprod-inv-content py-3 ">
                             <h2> Design Invitation </h2></br>
                             <p> Saatnya beralih ke undangan digital.<br />
                             Invisign siap membantu anda sebarkan kabar bahagiamu.<br />
                             </p>
-                            <a href="{{ route('dinvitation')}}" class="btn btn-ourprod px-4 mt-4">Lihat Katalog&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
+                            <a href="{{ route('dinvitation')}}" class="btn btn-ourprod px-4 mt-4">Lihat Katalog</a>
                         </div>
                     </div>
                 </div>
@@ -65,17 +70,20 @@
         <div class="container">
             <div class="ourprod-prod">
                 <div class="row ourprod-prod-bg align-items-center">    
-                    <div class="col-sm-6 col-md-6 col-lg-6 ">
+                    <div class="col-12 mt-3 text-center img-ourprod-inv mobile">
+                        <img src="frontend\images\Prod_Design.png" alt="" class="">
+                    </div>
+                    <div class="col-12 col-md-6 mt-3">
                         <div class="ourprod-prod-content py-3">
                             <h2>Design Product</h2></br>
                             <p>
                             Personalisasikan produk anda.<br />
                             Dengan design yang premium dan elegan.<br />
                             </p>
-                            <a href="{{ route('dproduct')}}" class="btn btn-ourprod px-4 mt-4"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;&nbsp;Lihat Katalog</a>
+                            <a href="{{ route('dproduct')}}" class="btn btn-ourprod px-4 mt-4">Lihat Katalog</a>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-6 text-center img-ourprod-inv">
+                    <div class="col-md-4 mt-md-3 text-center img-ourprod-inv">
                         <img src="frontend\images\Prod_Design.png" alt="" class="">
                     </div>
                 </div>
@@ -93,10 +101,10 @@
             </div>    
         </div>
         <div class="container">
-            <div class="row justify-content-center mt-5">
+            <div class="row justify-content-md-center mt-5">
                 
                 @foreach ($items as $item)
-                <div class="package-list col-sm-6 col-lg-3 text-center pb-4">
+                <div class="package-list col-6 col-md-3 text-center pb-4">
                     <div class="card-our-package text-center" >
                         <div class="card-our-package-bg">
                             <div class="package-title px-2">
@@ -104,20 +112,14 @@
                             </div>
                             <br />
                             <div class="feature-info py-2">
-                                <ul>
-                                    <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_1}}</li>
-                                    <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_2}}</li>
-                                    <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_3}}</li>
-                                </ul>
+                                <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_1}}</li>
+                                <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_2}}</li>
+                                <li><i class="fa fa-check-circle"></i>&nbsp;{{ $item->feature_3}}</li>
                             </div>
                             <hr >
-                            <div class="disc-title text-center">
-                                <p>{{ $item->product_discount->amount*100}}&nbsp;%<br>OFF
-                                </p>
-                            </div>
                             <div class="price my-2">
                             Mulai dari
-                            <h5>@currency($item->initial_price)</h5>
+                            <h5>@currency($item->initial_price)</h5><small>Discount {{ $item->product_discount->amount*100}}&nbsp;%</small>
                             <p>@currency($item->initial_price-($item->initial_price*$item->product_discount->amount ))</p>
                             </div>
                             <a href="#Ourprod" class="btn btn-package ">Pesan Sekarang&nbsp;<i class="fa fa-shopping-cart"></i></a>
@@ -127,6 +129,7 @@
                 @endforeach
             </div>
         </div>
+        
     </section>
 
     <!-- Tesimoni -->

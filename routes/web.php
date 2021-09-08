@@ -3,17 +3,20 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\DinvitationController;
-use App\Http\Controllers\DproductController;
+use App\Http\Controllers\DesignInvitationController;
+use App\Http\Controllers\DesignProductController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\MyOrdersController;
 use App\Http\Controllers\MyTestimonyController;
+use App\Http\Controllers\SettingController;
+//use App\Http\Controllers\MidtransController;
 use App\Http\Controllers\Admin\ProductDetailController;
 use App\Http\Controllers\Admin\ProductDiscountController;
 use App\Http\Controllers\Admin\ProductTypeController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\Admin\TestimonyController;
+use App\Http\Controllers\Admin\UserListController;
 //use App\Http\Controllers\SordersController;
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +30,9 @@ use App\Http\Controllers\Admin\TestimonyController;
 */
 Route::get('/', [HomeController::class,'index'])->name('home');
 
-Route::get('/designinvitation', [DinvitationController::class,'index'])->name('dinvitation');
+Route::get('/designinvitation', [DesignInvitationController::class,'index'])->name('dinvitation');
 
-Route::get('/designproduct', [DproductController::class,'index'])->name('dproduct');
+Route::get('/designproduct', [DesignProductController::class,'index'])->name('dproduct');
 
 Route::resource('myorder', MyOrdersController::class);
 
@@ -56,7 +59,7 @@ Route::get('/testi/sukses/{id}', [MyTestimonyController::class,'success'])
 //        ->name('myorder-destroy');
 
 Route::post('/orders/{id}', [OrdersController::class,'process'])
-        ->name('orders_process')
+        ->name('orders-process')
         ->middleware(['auth','verified']);
 
 Route::get('/orders/{id}', [OrdersController::class,'index'])
@@ -66,6 +69,16 @@ Route::get('/orders/{id}', [OrdersController::class,'index'])
 Route::get('/orders/sukses/{id}', [OrdersController::class,'success'])
         ->name('orders-success')
         ->middleware(['auth','verified']);
+
+// Route::get('setting', [SettingController::class,'index'])
+//         ->name('setting')
+//         ->middleware(['auth','verified']);
+
+// Route::get('setting/edit', [SettingController::class,'edit'])
+//         ->name('edit-setting')
+//         ->middleware(['auth','verified']);
+
+Route::resource('setting', SettingController::class);
 // Route::get('/orders/create/{detail_id}', [OrdersController::class,'create'])
 //         ->name('orders-create')
 //         ->middleware(['auth','verified']);
@@ -102,9 +115,17 @@ Route::prefix('admin')
         Route::resource('transaction', TransactionController::class);
 
         Route::resource('testimony', TestimonyController::class);
+
+        Route::resource('user-list', UserListController::class);
     
     });
     
 Auth::routes(['verify' => true]);
+
+//midtrans
+// Route::post('/midtrans/callback', [MidtransController::class,'notificationHandler']);
+// Route::get('/midtrans/finish', [MidtransController::class,'finishRedirect']);
+// Route::get('/midtrans/unfinish', [MidtransController::class,'unfinishRedirect']);
+// Route::get('/midtrans/error', [MidtransController::class,'errorRedirect']);
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

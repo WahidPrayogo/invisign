@@ -8,6 +8,6 @@ class SordersController extends Controller
 {
     public function index(Request $request)
     {
-        return view('pages.sorders');
+        return view('pages.notification.success-orders');
     }
 }

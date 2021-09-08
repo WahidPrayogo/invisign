@@ -7,7 +7,7 @@
 @section('content')
 
 <section class="section-order">
-  <div class="container py-5">
+  <div class="container py-md-5">
     <div class="container">
       <div class="row">
         <div class="text-center title ">
@@ -18,21 +18,26 @@
     <div class="container ">
       <div class="row justify-content-center ">
         
-          <div class="col-md-4 detail-product body mx-2">
+          <div class="col-8 col-md-4 detail-product body mx-md-2 mx-1">
             <div class="body-bg">
               <div class="product-title text-center">
-                {{ $items->title}} <br>
-                <p>{{ $items->product_type->title}}</p>
+                {{ $item->product_detail->title}} <br>
+                <p>{{ $item->product_detail->product_type->title}}</p>
               </div>
-              <div class="card-body text-center pb-4">
-                <img src="{{ $items->galleries->count() ? Storage::url
-                ($items->galleries->first()->image) : 'frontend\images\Icon_B.png' }}" 
+              <div class="card-body text-center pb-md-4">
+                <img src="{{ $item->product_detail->galleries->count() ? Storage::url
+                ($item->product_detail->galleries->first()->image) : 'frontend\images\Icon_B.png' }}" 
                 class="img-detail">
               </div>              
             </div>
           </div>
-          <div class="col-md-4 detail-order body mx-2 ">
+          <div class="col-10 col-md-4 detail-order body mx-md-2 ">
             <div class="body-bg ">
+              <div class="card-body text-center p-0 pt-2">
+                <img src="{{ $item->product_detail->galleries->count() ? Storage::url
+                ($item->product_detail->galleries->first()->image) : 'frontend\images\Icon_B.png' }}" 
+                class="img-detail-mobile">
+              </div>    
               <div class="order-title text-center">
                 Details Orders
               </div>
@@ -56,16 +61,13 @@
                   <tr>
                     <th scope="row">Total</th>
                     <td class="col-1 text-center">:</td>
-                    <td>@currency($item->product_detail->price -
-                      ($item->product_detail->price * $item->product_detail->product_type->product_discount->amount))</td>
+                    <td>@currency($item->transaction_total)</td>
                   </tr>
                 </tbody>
               </table>
               <div class="payment px-2 ""><i>
                 Pembayaran bisa melalui rek berikut
-                <p>BRi XXXXXXXXX
-                  <br>
-                  BNI XXXXXXX
+                <p>BRI 682201000466503 a/n <strong>WAHID PRAYOGO</strong>
                 </p></i>
               </div>
               <div class="button text-center">

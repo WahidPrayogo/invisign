@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TransactionRequest extends FormRequest
+class UserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,9 @@ class TransactionRequest extends FormRequest
     public function rules()
     {
         return [
-            'transaction_status' => 'string|in:IN_CART,VERIFICATION,PENDING,SUCCESS,FINISH,CANCEL,FAIL',
-            'bukti_transfer' => 'image'
+            'name'=> 'max:255',
+            'username'=> 'max:255',
+            'roles'=> 'max:255'
         ];
     }
 }

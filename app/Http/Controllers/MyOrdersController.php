@@ -28,7 +28,7 @@ class MyOrdersController extends Controller
        //var_dump ($items);
 
        //$testi = Testimony::with(['transaction'])->get();
-        return view('pages.myorders',[
+        return view('pages.my-orders.index',[
             'items' => $items
             //'testi' => $testi         
         ]);
@@ -68,7 +68,7 @@ class MyOrdersController extends Controller
             'product_detail', 'user'
         ])->findOrfail($id);
 
-        return view('pages.myorders-detail',[
+        return view('pages.my-orders.detail',[
             'item' => $item
         ]);
     }
@@ -85,7 +85,7 @@ class MyOrdersController extends Controller
             'product_detail', 'user'
         ])->findOrfail($id);
 
-        return view('pages.uppayment',[
+        return view('pages.my-orders.upload-payment',[
             'item' => $item
         ]);
     }
@@ -100,7 +100,8 @@ class MyOrdersController extends Controller
     public function update(TransactionRequest $request, $id)
     {
         $data = $request->all();
-        
+        $data['transaction_status'] = 'VERIFICATION';
+
         if ($request->file('bukti_transfer') == null){
             $data['bukti_transfer'] = '';
         }else{
