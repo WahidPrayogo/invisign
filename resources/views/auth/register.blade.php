@@ -12,12 +12,12 @@
                 <div class="card-body body card-register ">
                     <div class="body-bg">
                         <a href="{{ route('home')}}">
-                            <img src="frontend\images\Icon_LB_C_H.png" alt="" class="w-25">
+                            <img src="frontend\images\Icon_LB_C_H.png" alt="" class="logo ">
                         </a>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
         
-                            <div class="form-group row justify-content-center">
+                            <div class="form-group row justify-content-center mt-md-5">
                                 <label for="username" class="col-md-3 col-form-label">{{ __('Username') }}</label>
                                 
                                 <div class="col-md-7">
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
 
-                            <div class="justify-content-center my-3 px-3">
+                            <div class="justify-content-center mt-md-5 my-3 px-3">
                                 <button type="submit" class="btn btn-primary px-5">
                                     {{ __('Register') }}
                                 </button>

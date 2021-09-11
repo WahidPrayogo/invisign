@@ -9,7 +9,7 @@
     <div class="container login">
         <div class="main-login py-md-2">
             <div class="row align-items-center justify-content-center ">
-                <div class="col-md-6 text-center img-main">
+                <div class="col-md-6 text-center img-main d-none d-md-block">
                     <img src="frontend\images\Prod_All.png" alt="" class="w-100">
                 </div>
                 <div class="col-md-4 text-center">

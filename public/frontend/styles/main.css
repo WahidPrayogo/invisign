@@ -96,21 +96,39 @@ color: white;
 
 @media only screen and (max-width: 400px) {
   .navbar {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    background: white;
+    padding: 0;
+    margin-left: -3.3%;
+    z-index: 2;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    color: purple;
+    border-bottom: 0.25rem solid transparent;
+  }
+
+  .navbar-light .navbar-nav .nav-link:before {
+    color: purple;
+    border-bottom: 0.25rem solid transparent;
+  }
+
+  .navbar-light .navbar-nav .nav-link:hover {
+    border-bottom: none;
+  }
+
+  .brand {
+    display: none;
   }
 
   .navbar li {
-    margin-right: 2rem;
     font-size: 12px;
-    text-align: right;
   }
 
-  .navbar-toggler {
-    display: block;
-  }
-  .navbar-brand img {
-    width: 40%;
+  .navbar .fa {
+    size: 2rem;
   }
 
   .show {
@@ -120,7 +138,6 @@ color: white;
   .navbar .dropdown-menu {
     padding: 0.5rem;
     font-size: 12px;
-    text-align: right;
     background:  unset;
     border: 0rem none;
   }
@@ -135,6 +152,18 @@ color: white;
   
   .navbar .btn {
     font-size: 12px;
+  }
+
+  .btn-login {
+    font-size: 10px;
+    background-color: initial;
+    color: purple;
+  }
+  
+  .btn-login:hover {
+    background-color: initial;
+    color: purple;
+    font-size: 10px;
   }
 
 }
@@ -175,10 +204,11 @@ color: white;
     text-align: center;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    padding-top: 2rem;
+    padding-top: 3rem;
   }
   
   .header h1 {
+    margin-top: 3rem;
     font-size: 22px;
     font-family: 'Playfair Display', serif;
   }
@@ -448,7 +478,7 @@ color: white;
   }
   
   .section-package .card-our-package:hover {
-    transform: scale(1.05);
+    transform: scale(1);
   }
   
   .section-package .card-our-package .feature-info {
@@ -595,8 +625,8 @@ color: white;
 
 @media only screen and (max-width: 400px) {
   .section-detail-product {
-    border-top-right-radius: 5% 1%;
-    border-top-left-radius: 5% 1%;
+    border-top-right-radius: 0%;
+    border-top-left-radius: 0%;
     border-bottom-right-radius: 5% 1%;
     border-bottom-left-radius: 5% 1%;
   }
@@ -754,11 +784,12 @@ color: white;
 
 @media only screen and (max-width: 400px) {
   .section-order {
-    border-top-right-radius: 5% 1%;
-    border-top-left-radius: 5% 1%;
+    border-top-right-radius: 0%;
+    border-top-left-radius: 0%;
     border-bottom-right-radius: 5% 1%;
     border-bottom-left-radius: 5% 1%;
     min-height: 85vh;
+    padding-bottom: 2rem;
   }
   
   .section-order .title {
@@ -823,8 +854,8 @@ color: white;
 
 @media only screen and (max-width: 400px) {
   .section-success {
-    border-top-right-radius: 5% 1%;
-    border-top-left-radius: 5% 1%;
+    border-top-right-radius: 0%;
+    border-top-left-radius: 0%;
     border-bottom-right-radius: 5% 1%;
     border-bottom-left-radius: 5% 1%;
     min-height: 85vh;
@@ -984,6 +1015,10 @@ color: white;
   .footer .site-feature {
     display: none;
   }
+  
+  .footer {
+    margin-bottom: 3rem;
+  }
 }
 
 /* Login */
@@ -992,7 +1027,8 @@ color: white;
   margin: 1rem;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 10px;
+  border-radius: 10px;  
+  background-color: white;
 }
 
 .card-login .body-bg {
@@ -1015,12 +1051,21 @@ color: white;
   margin-bottom: 0rem;
 }
 
+@media only screen and (max-width: 400px) {
+  .card-login {
+    margin-top: 30%;
+  }
+
+  .login .img-header img {
+    width: 50%;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+  }
+}
+
 /* Register */
 
-.register {
-  background: linear-gradient(45deg, #0055b3, #0caaf3 100% );
-  
-}
+
 .register .card-register {
   margin: 1rem;
   min-height: 400px;
@@ -1048,14 +1093,50 @@ color: white;
   border-radius: 10px;
 }
 
+.register .logo {
+  width: 25%;
+}
+
+@media only screen and (max-width: 400px) {
+  .register .card-register {
+    margin-top: 10%;
+    font-size: 14px;
+  }
+  
+  .register .body-bg {
+    padding: 0.5rem;
+  }
+  
+  .register .logo {
+    width: 50%;
+    padding: 1rem 0;
+  }
+  .register .form-group {
+    margin-top: 0.5rem;
+  }
+  
+  .register .btn {
+    font-size: 14px;
+    margin: 0.5rem 0 ;
+  }
+
+  .card-reset {
+    margin: 50% 1rem 0 ;
+  }
+
+  .card-reset .body-bg img {
+    width: 50% !important;
+  }
+}
+
 /* My Order -----------------------*/
 
 .section-myorder {
   background-color: white;
-  border-top-right-radius: 5% 1%;
-  border-top-left-radius: 5% 1%;
-  border-bottom-right-radius: 5% 1%;
-  border-bottom-left-radius: 5% 1%;
+  border-top-right-radius: 5% ;
+  border-top-left-radius: 5% ;
+  border-bottom-right-radius: 5% ;
+  border-bottom-left-radius: 5% ;
 }
 
 .section-myorder .body {
@@ -1118,6 +1199,10 @@ color: white;
 @media only screen and (max-width: 400px) {
   .section-myorder {
     padding: 1rem 0rem;
+    border-top-right-radius: 0% ;
+    border-top-left-radius: 0% ;
+    border-bottom-right-radius: 5% 1%;
+    border-bottom-left-radius: 5% 1%;
   }
 
   .section-myorder .body {
@@ -1136,6 +1221,12 @@ color: white;
   .section-myorder-detail {
     padding: 1rem 0rem;
     text-align: center;
+    border-top-right-radius: 0%;
+    border-top-left-radius: 0%;
+  }
+
+  .section-myorder-detail .img-detail {
+    width: 60%;
   }
 
   .section-myorder-detail .mobile {
@@ -1258,7 +1349,7 @@ color: white;
 .content-setting .cover-blur {
   background: rgba(252, 250, 250, 0.1);
   backdrop-filter: blur(2rem);
-  margin: 0 -0.5rem;
+  margin: 0 -0.7rem;
 }
 
 .content-setting h3{
@@ -1282,6 +1373,74 @@ color: white;
   color: white;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 400px) {
+  .setting {
+    border-top-right-radius: 0%;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 5% 1%;
+    border-bottom-left-radius: 5% 1%;
+    font-size: 12px;
+    min-height: 85vh;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  
+  .side-setting {
+    padding: 1rem;
+  }
+  
+  .side-setting h4{
+    font-size: 14px;
+  }
+  
+  .side-setting h6{
+    font-size: 12px;
+  }
+  
+  .content-setting label{
+    font-weight: normal;
+  }
+
+  .content-setting input {
+    font-size: 12px;
+  }
+  
+  .content-setting .cover-blur {
+    background: rgba(252, 250, 250, 0);
+    backdrop-filter: blur(0rem);
+    margin: 0 -0.7rem;
+  }
+  
+  .content-setting h3{
+    font-size: 14px;
+  }
+  
+  .setting .btn-edit {
+    font-size: 12px;
+  }
+  
+  .setting .btn-edit:hover {
+    font-size: 12px;
+  }
+
+  .setting .btn-danger {
+    background: red;
+    color: white;
+    border-radius: 25px;
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 12px;
+  }
+  
+  .setting .btn-danger:hover {
+    background: rgba(255, 0, 0, 0.856);
+    color: white;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
 }
 
 /*carrousel*/

@@ -37,10 +37,10 @@
                         <div class="card-body text-center">
                             <img src="{{ $item->product_detail->galleries->count() ? Storage::url
                             ($item->product_detail->galleries->first()->image) : 'frontend\images\Icon_B.png' }}" 
-                            class="img-detail w-100">
+                            class="img-detail ">
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 ">
+                    <div class="col-12 col-md-6 mt-md-3">
                         <table class="table table-bordered ">
                             <tr>
                                 <th>ID</th>

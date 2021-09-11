@@ -9,8 +9,8 @@
 <section class="setting">
 
     <div class="container">
-        <div class="row justify-content-center p-5">
-            <div class="col-md-9 content">
+        <div class="row justify-content-center p-md-5">
+            <div class="col-9 content">
                 <div class="row justify-content-center">
                     <div class="col-md-3 side-setting text-center" >
                         <a href="#" >
@@ -20,7 +20,7 @@
                         <h6 class="username">{{ Auth::user()->username }}</h3>
                     </div>
                     <div class="col-md-9 content-setting ">
-                        <div class="cover-blur p-5">
+                        <div class="cover-blur p-4 p-md-5">
                             <h3><i class="fa fa-user"></i> Profile</h3>
                             <hr>
                             <div class="row">
@@ -42,12 +42,28 @@
                                 </div>
                             </div>
                             <!-- Nav -->
-                            <div class="button-nav mt-3">
+                            <div class="button-nav mt-md-5 text-center">
                                 <a href="{{ route('setting.edit',Auth::user()->id)}}" class="btn btn-edit  px-md-5">
                                     Edit Profile &nbsp;<i class="fa fa-pencil"></i>
                                 </a>
                             </div>
+                            
+                            
                         </div>
+                        <div class="cover-blur p-4 p-md-5">
+                            <h3></i>Setting</h3>
+                            <hr>
+                            @if(Auth::check() && Auth::user()->roles == "ADMIN")
+                            <a class="btn btn-edit" href="{{ url('admin')}}">
+                                <i class="fas fa-tasks fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Dashboard Admin
+                            </a>
+                            @endif
+                            <form class="form-inline d-sm-block d-md-none " action="{{ url('logout')}}" method="POST">
+                                @csrf
+                                <button class="btn btn-danger my-2 my-sm-0" type="submit"><i class="fa fa-sign-out"></i>&nbsp;Keluar</button>
+                            </form>
+                        </div>    
                     </div>
                 </div>
             </div>

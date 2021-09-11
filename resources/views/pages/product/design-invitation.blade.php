@@ -27,7 +27,7 @@
                           </div>
                           <div class="card-body text-center">
                             <img src="{{ $item->galleries->count() ? Storage::url
-                            ($item->galleries->first()->image) : 'frontend\images\Icon_B.png' }}" 
+                            ($item->galleries->first()->image) : '\frontend\images\Icon_B.png' }}" 
                             class="img-detail">
                           </div>
                           <div class="price ">
