@@ -1,6 +1,13 @@
 
+
 <!-- Topbar -->
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+<div class="top-bar d-md-none text-center">
+    <div class="icon-web ">
+        <img src="{{url('frontend\images\Icon_C.png')}}" alt=""class=""><span>INVISIGN ADMIN</span>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow main-navbar">
 
     <!-- Sidebar Toggle (Topbar) -->
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -167,5 +174,18 @@
 
     </ul>
   
+</nav>
+
+<nav class="navbar navbar-expand navbar-light bottom d-md-none">
+    <div class="navbar-admin collapse navbar-collapse justify-content-center text-center">
+        <ul class="navbar-nav ">
+            <li class="col-6 nav-item mx-2 ">
+                <a class="nav-link" href="{{ route('dashboard')}}"><i class="fa fa-home d-md-none"></i><br class="d-md-none">Dashboard</a>
+            </li>
+            <li class="col-6 nav-item mx-2 d-md-none">
+                <a class="nav-link" href="{{ url('setting')}}"><i class="fa fa-user"></i><br>Me</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 <!-- End of Topbar -->

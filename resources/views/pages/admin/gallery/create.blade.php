@@ -3,12 +3,12 @@
 @section('content')
 
     <!-- Begin Page Content -->
-    <div class="container-fluid">
+    <div class="container-fluid tambah-gallery">
 
         
 
         @if ($errors->any())
-        <div class="alert alert-danger">
+        <div class="alert alert-danger ">
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -23,7 +23,7 @@
             <div class="card-body">
 
                 <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-center m-4 p-3">
+                <div class="d-sm-flex align-items-center justify-content-center text-center my-3 my-md-0 m-md-4 p-md-3">
                     <h1 class="h3 mb-0 text-gray-800"> Tambah Gallery</h1>      
                 </div>
                 <hr>

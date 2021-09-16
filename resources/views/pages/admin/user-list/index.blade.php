@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Begin Page Content -->
-    <div class="container-fluid">
+    <div class="container-fluid daftar-user">
 
        
         <!-- Page Content -->
@@ -11,7 +11,7 @@
             <div class="card-body">
                 
                 <!-- Page Heading -->
-                <div class="d-sm-flex justify-content-center m-4 p-3">
+                <div class="d-sm-flex justify-content-center text-center my-3 my-md-0 m-md-4 p-md-3">
                     <h1 class="h3 mb-0 text-gray-800">User List</h1>
                 </div>
                 <hr>
@@ -33,9 +33,9 @@
                                 <thead>
                                     <tr class="text-center">
                                         <th>No</th>
-                                        <th>Nama</th>
+                                        <th class="mobile">Nama</th>
                                         <th>Username</th>
-                                        <th>Email</th>
+                                        <th class="mobile">Email</th>
                                         <th>Role</th>
                                         <th>Action</th>
                                     </tr>
@@ -44,9 +44,9 @@
                                     @forelse ($items as $no => $item)
                                     <tr>
                                         <td class="text-center">{{ $items->firstItem() + $no }}</td>
-                                        <td>{{ $item->name }}</td>
+                                        <td class="mobile">{{ $item->name }}</td>
                                         <td>{{ $item->username }}</td>
-                                        <td>{{ $item->email}}</td>
+                                        <td class="mobile">{{ $item->email}}</td>
                                         <td>{{ $item->roles}}</td>
                                         <td class="text-center">
                                             <a href="{{ route('user-list.edit', $item->id)}}" class="btn btn-info">
@@ -68,7 +68,7 @@
                 </div>
 
                 <!-- Pagination -->
-                <div class="d-sm-flex justify-content-center mb-4">
+                <div class="d-sm-flex justify-content-center mb-4 pagination text-center">
                     {{ $items->links() }}
                 </div>
             </div>

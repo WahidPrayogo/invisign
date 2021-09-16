@@ -59,7 +59,7 @@
                                 Dashboard Admin
                             </a>
                             @endif
-                            <form class="form-inline d-sm-block d-md-none " action="{{ url('logout')}}" method="POST">
+                            <form class="form-inline " action="{{ url('logout')}}" method="POST">
                                 @csrf
                                 <button class="btn btn-danger my-2 my-sm-0" type="submit"><i class="fa fa-sign-out"></i>&nbsp;Keluar</button>
                             </form>

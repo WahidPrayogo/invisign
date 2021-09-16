@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Begin Page Content -->
-    <div class="container-fluid">
+    <div class="container-fluid daftar-discount">
 
        
         <!-- Page Content -->
@@ -11,7 +11,7 @@
             <div class="card-body">
                 
                 <!-- Page Heading -->
-                <div class="d-sm-flex justify-content-center m-4 p-3">
+                <div class="d-sm-flex justify-content-center text-center my-3 my-md-0 m-md-4 p-md-3">
                     <h1 class="h3 mb-0 text-gray-800">Program Discount</h1>
                 </div>
                 <hr>
@@ -20,8 +20,8 @@
                     <div class="col-md-6 d-flex align-items-center">
                         
                     </div>
-                    <div class="col-md-6 d-flex flex-row-reverse">
-                        <a href="{{ route('product-discount.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm my-2"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Produk</a>
+                    <div class="col-md-6 d-flex flex-md-row-reverse">
+                        <a href="{{ route('product-discount.create')}}" class="d-block d-sm-inline-block btn btn-sm btn-primary shadow-sm my-2"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Discount</a>
                     </div>
                 </div>
 
@@ -35,8 +35,8 @@
                                         <th>No</th>
                                         <th>Nama Program</th>
                                         <th>Amount</th>
-                                        <th>Mulai</th>
-                                        <th>Berakhir</th>
+                                        <th class="mobile">Mulai</th>
+                                        <th class="mobile">Berakhir</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -46,8 +46,8 @@
                                         <td class="text-center">{{ $items->firstItem() + $no }}</td>
                                         <td>{{ $item->title }}</td>
                                         <td>{{ $item->amount*100 }}%</td>
-                                        <td>{{ $item->start_at }}</td>
-                                        <td>{{ $item->end_at }}</td>
+                                        <td class="mobile">{{ $item->start_at }}</td>
+                                        <td class="mobile">{{ $item->end_at }}</td>
                                         <td class="text-center">
                                             <a href="{{ route('product-discount.edit', $item->id)}}" class="btn btn-info">
                                                 <i class="fa fa-pencil-alt"></i>
@@ -76,7 +76,7 @@
                 </div>
 
                 <!-- Pagination -->
-                <div class="d-sm-flex justify-content-center mb-4">
+                <div class="d-sm-flex justify-content-center mb-4 pagination text-center">
                     {{ $items->links() }}
                 </div>
             </div>

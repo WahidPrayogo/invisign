@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Begin Page Content -->
-    <div class="container-fluid">
+    <div class="container-fluid detail-type-produk">
 
 
 
@@ -22,7 +22,7 @@
             <div class="card-body">
 
                         <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-center m-4 p-3">
+                <div class="d-sm-flex align-items-center justify-content-center text-center my-3 my-md-0 m-md-4 p-md-3">
                     <h1 class="h3 mb-0 text-gray-800"> Detail Produk Type {{ $item->title }}</h1>      
                 </div>
                 <hr>
@@ -67,9 +67,17 @@
                             <i class="fa fa-arrow-left"></i>
                         </a>
                         &nbsp;&nbsp;
-                        <a href="{{ route('product-type.edit', $item->id)}}" class="btn btn-info px-md-5">
+                        <a href="{{ route('product-type.edit', $item->id)}}" class="btn btn-info px-md-5 d-block">
                             <i class="fa fa-pencil-alt"></i>
                         </a>
+                        <form action="{{ route('product-type.destroy', $item->id)}}" method="POST" 
+                            class="d-inline d-md-none mx-2 mx-md-0">
+                            @csrf
+                            @method('delete')
+                            <button class="btn btn-danger d-block">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

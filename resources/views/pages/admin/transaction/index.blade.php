@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Begin Page Content -->
-    <div class="container-fluid">
+    <div class="container-fluid daftar-transaksi">
 
        
 
@@ -12,7 +12,7 @@
             <div class="card-body">
 
                 <!-- Page Heading -->
-                <div class="d-sm-flex justify-content-center m-4 p-3">
+                <div class="d-sm-flex justify-content-center text-center my-3 my-md-0 m-md-4 p-md-3">
                     <h1 class="h3 mb-0 text-gray-800">Daftar Transaksi</h1>
                 </div>
                 <hr>
@@ -25,9 +25,9 @@
                                 <thead>
                                     <tr class="text-center">
                                         <th>No</th>
-                                        <th>Product</th>
+                                        <th class="mobile">Product</th>
                                         <th>User</th>
-                                        <th>Total</th>
+                                        <th class="mobile">Total</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -36,22 +36,22 @@
                                     @forelse ($items as $no => $item)
                                         <tr>
                                             <td class="text-center">{{ $items->firstItem() + $no }}</td>
-                                            <td>{{ $item->product_detail->title }}</td>
+                                            <td class="mobile">{{ $item->product_detail->title }}</td>
                                             <td>{{ $item->user->name }}</td>
-                                            <td>@currency($item->transaction_total)</td>
+                                            <td class="mobile">@currency($item->transaction_total)</td>
                                             <td class="text-center">{{ $item->transaction_status }}</td>
                                             <td class="text-center">
                                                 <a href="{{ route('transaction.show', $item->id)}}" class="btn btn-primary">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
-                                                <a href="{{ route('transaction.edit', $item->id)}}" class="btn btn-info">
+                                                <a href="{{ route('transaction.edit', $item->id)}}" class="btn btn-info mobile">
                                                     <i class="fa fa-pencil-alt"></i>
                                                 </a>
                                                 <form action="{{ route('transaction.destroy', $item->id)}}" method="POST" 
                                                     class="d-inline">
                                                     @csrf
                                                     @method('delete')
-                                                    <button class="btn btn-danger">
+                                                    <button class="btn btn-danger mobile">
                                                         <i class="fa fa-trash"></i>
                                                     </button>
                                                 </form>
@@ -71,7 +71,7 @@
                 </div>
                 
                 <!-- Pagination -->
-                <div class="d-sm-flex justify-content-center mb-4">
+                <div class="d-sm-flex justify-content-center mb-4 pagination text-center">
                     {{ $items->links() }}
                 </div>
             

@@ -1,0 +1,610 @@
+@media only screen and (max-width: 400px) {
+    body {
+        min-height: 100vh;
+    }
+
+    /*Navbar*/
+    .main-navbar {
+        display: none;
+    }
+
+    .navbar {
+        margin-left: 0% !important;
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .top-bar {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .top-bar img {
+        width: 10%;
+    }
+
+    .top-bar span {
+        margin-left: 1rem;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    /*Dashboard*/
+    .dashboard {
+        min-height: 50vh;
+    }
+
+    .dashboard h1 {
+        font-size: 16px;
+    }
+
+    .dashboard .dashboard-text {
+        font-size: 12px;
+    }
+
+    .dashboard .dashboard-number {
+        font-size: 16px;
+    }
+
+    .menu-custom {
+        min-height: 50vh;
+        font-size: 12px;
+    }
+
+    .menu-custom a {
+        color: grey;
+    }
+
+    .menu-custom h1 {
+        font-size: 16px;
+    }
+
+    /*Daftar Produk*/
+    .daftar-produk {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .daftar-produk .card-body h1 {
+        font-size: 16px;
+    }
+
+    .daftar-produk .input-group-pend,.small,.pagination,thead,tbody,.btn {
+        font-size: 12px;
+    }
+    
+    .daftar-produk .t-harga,.t-disc,.c-harga,.c-disc,.btn-danger,.btn-info {
+        display: none;
+    }
+
+    /*Detail Produk*/
+    .detail-daftar-produk {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .detail-daftar-produk .card-body h1 {
+        font-size: 16px;
+    }
+
+    .detail-daftar-produk .card-body table,.btn {
+        font-size: 12px;
+    }
+
+
+    /*Edit Detail Produk*/
+    .edit-daftar-produk {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .edit-daftar-produk .card-body h1 {
+        font-size: 16px;
+    }
+
+    .edit-daftar-produk .card-body {
+        font-size: 12px;
+    }
+
+    .edit-daftar-produk .card-body input {
+        font-size: 12px;
+    }
+
+    .edit-daftar-produk .card-body select {
+        font-size: 12px;
+    }
+    
+    .edit-daftar-produk .card-body textarea {
+        font-size: 12px;
+    }
+    
+    .edit-daftar-produk .card-body .form-group .input-group-text {
+        font-size: 12px;
+    }
+
+    /*Tambah Detail Produk*/
+    .tambah-daftar-produk {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .tambah-daftar-produk .card-body h1 {
+        font-size: 16px;
+    }
+
+    .tambah-daftar-produk .card-body {
+        font-size: 12px;
+    }
+
+    .tambah-daftar-produk .card-body input {
+        font-size: 12px;
+    }
+
+    .tambah-daftar-produk .card-body select {
+        font-size: 12px;
+    }
+    
+    .tambah-daftar-produk .card-body textarea {
+        font-size: 12px;
+    }
+    
+    .tambah-daftar-produk .card-body .form-group .input-group-text {
+        font-size: 12px;
+    }
+
+    /*Type Produk*/
+    .type-produk {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .type-produk .card-body h1 {
+        font-size: 16px;
+    }
+
+    .type-produk .input-group-pend,.small,.pagination,thead,tbody,.btn {
+        font-size: 12px;
+    }
+    
+    .type-produk .t-harga,.t-disc,.c-harga,.c-disc,.btn-danger,.btn-info {
+        display: none;
+    }
+
+    /*Detail Type Produk*/
+    .detail-type-produk {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .detail-type-produk .card-body h1 {
+        font-size: 16px;
+    }
+
+    .detail-type-produk .card-body table,.btn {
+        font-size: 12px;
+    }
+
+    /*Edit Type Produk*/
+    .edit-type-produk {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .edit-type-produk .card-body h1 {
+        font-size: 16px;
+    }
+
+    .edit-type-produk .card-body {
+        font-size: 12px;
+    }
+
+    .edit-type-produk .card-body input {
+        font-size: 12px;
+    }
+
+    .edit-type-produk .card-body select {
+        font-size: 12px;
+    }
+    
+    .edit-type-produk .card-body textarea {
+        font-size: 12px;
+    }
+    
+    .edit-type-produk .card-body .form-group .input-group-text {
+        font-size: 12px;
+    }
+
+    /*Tambah Type Produk*/
+    .tambah-type-produk {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .tambah-type-produk .card-body h1 {
+        font-size: 16px;
+    }
+
+    .tambah-type-produk .card-body {
+        font-size: 12px;
+    }
+
+    .tambah-type-produk .card-body input {
+        font-size: 12px;
+    }
+
+    .tambah-type-produk .card-body select {
+        font-size: 12px;
+    }
+    
+    .tambah-type-produk .card-body textarea {
+        font-size: 12px;
+    }
+    
+    .tambah-type-produk .card-body .form-group .input-group-text {
+        font-size: 12px;
+    }
+
+    /*Daftar Discount*/
+    .daftar-discount {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .daftar-discount .card-body h1 {
+        font-size: 16px;
+    }
+
+    .daftar-discount .input-group-pend,.small,.pagination,thead,tbody,.btn {
+        font-size: 12px;
+    }
+
+    .daftar-discount .btn {
+        display: block;
+        margin: 0.5rem;
+    }
+    
+    .daftar-discount .mobile {
+        display: none;
+    }
+
+    /*Edit Discount*/
+    .edit-discount {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .edit-discount .card-body h1 {
+        font-size: 16px;
+    }
+
+    .edit-discount .card-body {
+        font-size: 12px;
+    }
+
+    .edit-discount .card-body input {
+        font-size: 12px;
+    }
+
+    .edit-discount .card-body select {
+        font-size: 12px;
+    }
+    
+    .edit-discount .card-body textarea {
+        font-size: 12px;
+    }
+    
+    .edit-discount .card-body .form-group .input-group-text {
+        font-size: 12px;
+    }
+
+    /*Tambah Discount*/
+    .tambah-discount {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .tambah-discount .card-body h1 {
+        font-size: 16px;
+    }
+
+    .tambah-discount .card-body {
+        font-size: 12px;
+    }
+
+    .tambah-discount .card-body input {
+        font-size: 12px;
+    }
+
+    .tambah-discount .card-body select {
+        font-size: 12px;
+    }
+    
+    .tambah-discount .card-body textarea {
+        font-size: 12px;
+    }
+    
+    .tambah-discount .card-body .form-group .input-group-text {
+        font-size: 12px;
+    }
+
+    /*Daftar Gallery*/
+    .daftar-gallery {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .daftar-gallery .card-body h1 {
+        font-size: 16px;
+    }
+
+    .daftar-gallery .input-group-pend,.small,.pagination,thead,tbody,.btn {
+        font-size: 12px;
+    }
+
+    .daftar-gallery .btn {
+        display: block;
+        margin: 0.5rem;
+    }
+    
+    .daftar-gallery .mobile {
+        display: none;
+    }
+
+    /*Edit Gallery*/
+    .edit-gallery {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .edit-gallery .card-body h1 {
+        font-size: 16px;
+    }
+
+    .edit-gallery .card-body {
+        font-size: 12px;
+    }
+
+    .edit-gallery .card-body input {
+        font-size: 12px;
+    }
+
+    .edit-gallery .card-body select {
+        font-size: 12px;
+    }
+    
+    .edit-gallery .card-body textarea {
+        font-size: 12px;
+    }
+    
+    .edit-gallery .card-body .form-group .input-group-text {
+        font-size: 12px;
+    }
+
+    /*Tambah Gallery*/
+    .tambah-gallery {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .tambah-gallery .card-body h1 {
+        font-size: 16px;
+    }
+
+    .tambah-gallery .card-body {
+        font-size: 12px;
+    }
+
+    .tambah-gallery .card-body input {
+        font-size: 12px;
+    }
+
+    .tambah-gallery .card-body select {
+        font-size: 12px;
+    }
+    
+    .tambah-gallery .card-body textarea {
+        font-size: 12px;
+    }
+    
+    .tambah-gallery .card-body .form-group .input-group-text {
+        font-size: 12px;
+    }
+
+    /*Daftar Transaksi*/
+    .daftar-transaksi {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .daftar-transaksi .card-body h1 {
+        font-size: 16px;
+    }
+
+    .daftar-transaksi .input-group-pend,.small,.pagination,thead,tbody,.btn {
+        font-size: 12px;
+    }
+
+    .daftar-transaksi .btn {
+        display: block;
+        margin: 0.5rem;
+    }
+    
+    .daftar-transaksi .mobile {
+        display: none;
+    }
+
+    /*Detail Transaksi*/
+    .detail-transaksi {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .detail-transaksi .card-body h1 {
+        font-size: 16px;
+    }
+
+    .detail-transaksi .card-body table,.btn {
+        font-size: 12px;
+    }
+
+    .detail-transaksi .mobile {
+        display: block;
+    }
+
+    /*Edit Transaksi*/
+    .edit-transaksi {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .edit-transaksi .card-body h1 {
+        font-size: 16px;
+    }
+
+    .edit-transaksi .card-body {
+        font-size: 12px;
+    }
+
+    .edit-transaksi .card-body input {
+        font-size: 12px;
+    }
+
+    .edit-transaksi .card-body select {
+        font-size: 12px;
+    }
+    
+    .edit-transaksi .card-body textarea {
+        font-size: 12px;
+    }
+    
+    .edit-transaksi .card-body .form-group .input-group-text {
+        font-size: 12px;
+    }
+
+    /*Daftar Testimony*/
+    .daftar-testimony {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .daftar-testimony .card-body h1 {
+        font-size: 16px;
+    }
+
+    .daftar-testimony .input-group-pend,.small,.pagination,thead,tbody,.btn {
+        font-size: 12px;
+    }
+
+    .daftar-testimony .btn {
+        display: block;
+        margin: 0.5rem;
+    }
+    
+    .daftar-testimony .mobile {
+        display: none;
+    }
+
+    /*Edit Testimony*/
+    .edit-testimony {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .edit-testimony .card-body h1 {
+        font-size: 16px;
+    }
+
+    .edit-testimony .card-body {
+        font-size: 12px;
+    }
+
+    .edit-testimony .card-body input {
+        font-size: 12px;
+    }
+
+    .edit-testimony .card-body select {
+        font-size: 12px;
+    }
+    
+    .edit-testimony .card-body textarea {
+        font-size: 12px;
+    }
+    
+    .edit-testimony .card-body .form-group .input-group-text {
+        font-size: 12px;
+    }
+
+    /*Daftar User*/
+    .daftar-user {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .daftar-user .card-body h1 {
+        font-size: 16px;
+    }
+
+    .daftar-user .input-group-pend,.small,.pagination,thead,tbody,.btn {
+        font-size: 12px;
+    }
+
+    .daftar-user .btn {
+        display: block;
+        margin: 0.5rem;
+    }
+    
+    .daftar-user .mobile {
+        display: none;
+    }
+
+    /*Edit User*/
+    .edit-user {
+        padding: 0.5rem ;
+        min-height: 100vh;
+        margin-bottom: 3.5rem;
+    }
+
+    .edit-user .card-body h1 {
+        font-size: 16px;
+    }
+
+    .edit-user .card-body {
+        font-size: 12px;
+    }
+
+    .edit-user .card-body input {
+        font-size: 12px;
+    }
+
+    .edit-user .card-body select {
+        font-size: 12px;
+    }
+    
+    .edit-user .card-body textarea {
+        font-size: 12px;
+    }
+    
+    .edit-user .card-body .form-group .input-group-text {
+        font-size: 12px;
+    }
+}

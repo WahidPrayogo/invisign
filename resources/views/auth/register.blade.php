@@ -14,7 +14,7 @@
                         <a href="{{ route('home')}}">
                             <img src="frontend\images\Icon_LB_C_H.png" alt="" class="logo ">
                         </a>
-                        <form method="POST" action="{{ route('login') }}">
+                        <form method="POST" action="{{ route('register') }}">
                             @csrf
         
                             <div class="form-group row justify-content-center mt-md-5">

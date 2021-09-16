@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Begin Page Content -->
-    <div class="container-fluid">
+    <div class="container-fluid edit-type-produk">
 
        
 

@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Begin Page Content -->
-    <div class="container-fluid">
+    <div class="container-fluid daftar-gallery">
 
         
         <!-- Page Content -->
@@ -11,7 +11,7 @@
             <div class="card-body">
                 
                 <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-center m-4 p-3">
+                <div class="d-sm-flex align-items-center justify-content-center text-center my-3 my-md-0 m-md-4 p-md-3">
                     <h1 class="h3 mb-0 text-gray-800">Product Gallery</h1>
                 </div>
                 <hr>
@@ -34,8 +34,8 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-6 d-flex flex-row-reverse">
-                        <a href="{{ route('gallery.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm my-2"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Produk</a>
+                    <div class="col-md-6 d-flex flex-md-row-reverse">
+                        <a href="{{ route('gallery.create')}}" class="d-block d-sm-inline-block btn btn-sm btn-primary shadow-sm my-2"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Gallery</a>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@
                 </div>
 
                 <!-- Pagination -->
-                <div class="d-sm-flex justify-content-center mb-4">
+                <div class="d-sm-flex justify-content-center mb-4 pagination text-center">
                     {{ $items->links() }}
                 </div>
 
