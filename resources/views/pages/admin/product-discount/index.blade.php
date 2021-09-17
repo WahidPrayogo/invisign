@@ -44,7 +44,11 @@
                                     @forelse ($items as $no => $item)
                                     <tr>
                                         <td class="text-center">{{ $items->firstItem() + $no }}</td>
-                                        <td>{{ $item->title }}</td>
+                                        <td>
+                                            {{ $item->title }}
+                                            <br>
+                                            ( {{ $item->status }} )
+                                        </td>
                                         <td>{{ $item->amount*100 }}%</td>
                                         <td class="mobile">{{ $item->start_at }}</td>
                                         <td class="mobile">{{ $item->end_at }}</td>

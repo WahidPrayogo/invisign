@@ -50,6 +50,7 @@ class ProductDiscountController extends Controller
      
         $data = $request->all();
         $data['amount'] = $request->amount / 100;
+        $data['status'] = 'ACTIVE';
         //$data ['amount'] = $request->data('amount')/100;
         
         //return $data;

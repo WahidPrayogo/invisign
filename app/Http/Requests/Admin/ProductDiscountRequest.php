@@ -28,7 +28,8 @@ class ProductDiscountRequest extends FormRequest
             'title' => 'required|max:255',
             'amount' => 'required',
             'start_at' => 'required',
-            'end_at' => 'required'
+            'end_at' => 'required',
+            'status' => 'max:255'
         ];
     }
 }

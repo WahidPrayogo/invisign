@@ -13,7 +13,7 @@ class ProductDiscount extends Model
     use SoftDeletes;
     
     protected $fillable = [
-        'pakages_id', 'title', 'amount', 'start_at', 'end_at'
+        'pakages_id', 'title', 'amount', 'start_at', 'end_at', 'status'
     ];
 
     protected $hidden = [
