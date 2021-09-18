@@ -30,19 +30,35 @@
                 <form action="{{ route('product-discount.update', $item->id)}}" method="POST">
                     @method('PUT')
                     @csrf
-                    <div class="form-group">
-                        <label for="title">Title</label>
-                        <input type="text" class="form-control" name="title" placeholder="Title" value="{{ $item->title }}">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" name="title" placeholder="Title" value="{{ $item->title }}">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="pakages_id">packages_id</label>
+                            <input type="number" class="form-control" name="pakages_id" placeholder="pakages_id" value="{{ $item->pakages_id }}">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="pakages_id">packages_id</label>
-                        <input type="number" class="form-control" name="pakages_id" placeholder="pakages_id" value="{{ $item->pakages_id }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="amount">Amount</label>
-                        <div class="input-group">
-                            <input type="number" class="form-control input-group-prepend" name="amount" placeholder="Amount" min="0" step=".01" value="{{ $item->amount*100 }}">
-                            <div class="input-group-text input-group-apppend">%</div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="amount">Amount</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control input-group-prepend" name="amount" placeholder="Amount" min="0" step=".01" value="{{ $item->amount*100 }}">
+                                <div class="input-group-text input-group-apppend">%</div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="status">Status</label>
+                            <select name="status" required class="form-control">
+                                <option value="{{ $item->status}}">{{ $item->status}}</option>
+                                @if ($item->status == 'ACTIVE')
+                                <option value="HIGHLIGHT">HIGHLIGHT</option>                                    
+                                @elseif ($item->status == 'HIGHLIGHT')
+                                <option value="ACTIVE">ACTIVE</option>                                    
+                                @endif
+
+                            </select>
                         </div>
                     </div>
                     <div class="row">

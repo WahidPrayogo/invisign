@@ -32,10 +32,16 @@
                           </div>
                           <div class="price ">
                             Harga
+                            @if ($item->product_type->product_discounts_id != 1) 
                             <h5>@currency($item->price)</h5><small>Discount {{ $item->product_type->product_discount->amount*100 }}&nbsp;%</small>
                             <p> @currency($item->price - ($item->product_type->product_discount->amount*$item->price)) </p> 
+                            @else
+                            <p> @currency($item->price - ($item->product_type->product_discount->amount*$item->price)) </p> 
+                            <h5 class="disc-normal">@currency($item->price)</h5><small class="disc-normal">Discount {{ $item->product_type->product_discount->amount*100 }}&nbsp;%</small>
+                            @endif
+                            
                           </div>
-                          <div class="pesan text-center mb-md-2">
+                          <div class="pesan text-center mb-md-2 bottom">
                             @auth
                               <form action="{{ route('orders-process', $item->id) }}" method="POST">
                                 @csrf

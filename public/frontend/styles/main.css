@@ -180,6 +180,13 @@ color: white;
   font-family: 'Playfair Display', serif;
 }
 
+.header .countdown {
+  font-size: 28px;
+}
+.header .countdown .title-count{
+  font-size: 20px;
+}
+
 .btn-choose {
   background: linear-gradient(90deg, #f78120,#fc9745,#f78120 100% );
   color: white;
@@ -216,9 +223,17 @@ color: white;
   .header p{
     font-size: 14px;
   }
-
+  
   .header .img-header {
     display: none;
+  }
+
+  .header .countdown {
+    font-size: 16px;
+  }
+
+  .header .countdown .title-count{
+    font-size: 12px;
   }
 
   .header .header-mobile {
@@ -596,6 +611,10 @@ color: white;
 
 .section-product .detail-product .price {
   text-align: center;
+}
+
+.section-product .detail-product .price .disc-normal{
+  color: white;
 }
 
 .section-product .detail-product .price h5 {

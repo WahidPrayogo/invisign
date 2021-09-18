@@ -22,12 +22,10 @@
                     Design
                     </h1>
                     <br />
-                    <p>
-                        Yuk Order Segera Sebelum Berakhir Masa Promonya
-                    <p>
-                        
-                    <p id="demo" class="countdown">
-                        
+                    
+                    <p id="demo" class="countdown">  
+                    
+                                                  
                     <p>
                     <a href="#Package" class="btn btn-choose px-4 mt-4">Pesan Sekarang</a>
                 </div>
@@ -166,10 +164,11 @@
         </div>
     </section>
 
+    @foreach($disctime->where('status','HIGHLIGHT') as $disctime)
     <script type="text/javascript">
         // Set the date we're counting down to
-        var countDownDate = new Date("Jan 30, 2022 00:00:00").getTime();
-        
+        //var countDownDate = new Date("Jan 30, 2022 00:00:00").getTime();
+        var countDownDate = new Date(<?php echo json_encode(date('M d, Y H:i:s', strtotime($disctime->end_at)) ); ?>).getTime();
         // Update the count down every 1 second
         var x = setInterval(function() {
         
@@ -186,14 +185,20 @@
           var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
           // Display the result in the element with id="demo"
-          document.getElementById("demo").innerHTML = days + " Days " + hours + " Hours "
-          + minutes + " minutes " + seconds + " second ";
-        
+          document.getElementById("demo").innerHTML = "<p class='title-count'>Yuk Order Segera Sebelum Berakhir Masa Promonya</p><b>" 
+                                                            + days + "</b>&nbsp;&nbsp;Days&nbsp;&nbsp;<b>" 
+                                                            + hours + "</b>&nbsp;&nbsp;Hours&nbsp;&nbsp;<b>"
+                                                            + minutes + "</b>&nbsp;&nbsp;minutes&nbsp;&nbsp;<b>" 
+                                                            + seconds + "</b>&nbsp;&nbsp;second&nbsp;&nbsp; ";
+                                                           
           // If the count down is finished, write some text
           if (distance < 0) {
             clearInterval(x);
             document.getElementById("demo").innerHTML = "EXPIRED";
           }
         }, 1000);
-      </script>
+    </script>
+    @endforeach
+    
+
 @endsection
