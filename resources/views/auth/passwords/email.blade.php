@@ -11,7 +11,7 @@
                     <div class="card-body body card-reset ">
                         <div class="body-bg">
                             <a href="{{ route('home')}}">
-                                <img src="{{ url('frontend\images\Icon_LB_C_H.png')}}" alt="" class="w-25 py-4">
+                                <img src="{{ url('frontend\images\Icon_LB_C_H.png')}}" alt="" class="w-25 py-4 " >
                             </a>
                                 @if (session('status'))
                                     <div class="alert alert-success" role="alert">

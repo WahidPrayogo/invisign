@@ -87,7 +87,7 @@ class ProductDiscountController extends Controller
         $item = ProductDiscount::findOrfail($id);
         //$item['start_at'] = Carbon::date('Y-m-d', time());
         //$item['end_at'] = date('Y-m-d', time());
-
+        
         // /return $item;
         return view('pages.admin.product-discount.edit',[
             'item' => $item

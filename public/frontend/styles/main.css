@@ -1462,4 +1462,56 @@ color: white;
 
 }
 
+/* Reset Password ---------------*/
+.reset-password {
+  min-height: 100vh;
+  padding-top: 5%;
+}
+
+.reset-password .reset-pass {
+  margin: 1rem;
+  background-color: #EBF5FB;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.reset-password .logo {
+  width: 25%;
+  align-items: center;
+}
+
+.reset-password label {
+  text-align: left;
+}
+
+@media only screen and (max-width:400px) {
+  .reset-password {
+    padding-top: 30%;
+  }
+  
+  .reset-password .logo {
+    width: 50%;
+  }
+
+}
+
+/* Verify Password ---------------*/
+.verify {
+  min-height: 45vh;
+  padding-top: 3%;
+}
+
+@media only screen and (max-width:400px) {
+  .verify {
+    min-height: 85vh;
+    padding-top: 50%;
+    font-size: 12px;
+  }
+  
+  .verify .btn {
+    font-size: 12px;
+  }
+
+}
 /*carrousel*/

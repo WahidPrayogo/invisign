@@ -24,7 +24,7 @@ class ProductDiscountRequest extends FormRequest
     public function rules()
     {
         return [
-            'pakages_id' => 'required|integer', 
+            'pakages_id' => 'integer', 
             'title' => 'required|max:255',
             'amount' => 'required',
             'start_at' => 'required',

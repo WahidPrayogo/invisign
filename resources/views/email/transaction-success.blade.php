@@ -117,10 +117,11 @@
                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                         <tbody>
                           <tr>
-                            <td style="width:250px;">
+                            <td style="width:100px;">
                               <img height="auto" src="{{ url('frontend/images/Icon_LB_C_H.png')}}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="250" />
                             </td>
                           </tr>
+                          
                         </tbody>
                       </table>
                     </td>
@@ -168,7 +169,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tr>
                     <td align="center" style="font-size:0px;padding:2rem 2rem;word-break:break-word;">
-                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:30px;font-weight:bold;line-height:1;text-align:center;color:#000000;">Here is Your Invoice</div>
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:24px;font-weight:bold;line-height:1;text-align:center;color:#000000;">Here is Your Invoice</div>
                     </td>
                   </tr>
                 </table>
@@ -221,9 +222,7 @@
                               <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                                 <tbody>
                                   <tr>
-                                    <td style="width:250px;">
-                                      <img height="auto" src="{{ url($data->product_detail->galleries[0]->image)}}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="250" />
-                                    </td>
+                                    
                                   </tr>
                                 </tbody>
                               </table>
@@ -290,22 +289,17 @@
                         <tr>
                           <td>Price</td>
                           <td>:&nbsp;</td>
-                          <td>Rp. {{ $data->product_detail->price}}</td>
+                          <td>@currency ($data->product_detail->price)</td>
                         </tr>
                         <tr>
                           <td>Discount</td>
                           <td>:&nbsp;</td>
-                          <td>N/A</td>
-                        </tr>
-                        <tr>
-                          <td>Unique Number</td>
-                          <td>:&nbsp;</td>
-                          <td>5</td>
+                          <td>{{$data->product_detail->product_type->product_discount->amount*100 ?? 'N/A'}}%</td>
                         </tr>
                         <tr>
                           <td><strong>Total</strong></td>
                           <td><strong>:&nbsp;</strong></td>
-                          <td><strong>Rp. {{ $data->transaction_total}}</strong></td>
+                          <td><strong>@currency ($data->transaction_total)</strong></td>
                         </tr>
                       </table>
                     </td>
@@ -315,7 +309,7 @@
                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                         <tr>
                           <td align="center" bgcolor="#414141" role="presentation" style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:10px 25px;background:#414141;" valign="middle">
-                            <a href="{{ url('orders/'.$data->id)}}" style="display:inline-block;background:#414141;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:3px;"> Check Detail </a>
+                            <a href="{{ url('myorders/'.$data->id)}}" style="display:inline-block;background:#414141;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:3px;"> Check Detail </a>
                           </td>
                         </tr>
                       </table>
@@ -346,15 +340,34 @@
         <tr>
           <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
       <![endif]-->
+      
     <div style="background:white;background-color:white;margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:white;background-color:white;width:100%;">
         <tbody>
           <tr>
             <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
-              <!--[if mso | IE]>
+              
+              
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tr>
+                    <td align="left" style="font-size:0px;padding:1rem 2rem 0;word-break:break-word;">
+                      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:12px;line-height:1;text-align:left;color:#000000;">
+                        Silahkan lakukan pembayaran ke rekening berikut <br>
+                        <strong>BRI 682201000466503 a/n WAHID PRAYOGO</strong>
+                        <p>
+                          Kemudian Upload bukti bayar ke halaman <strong><i> Order -> Klik pada transaksi anda -> kemudian upload Bukti Bayar -> tunggu proses verifikasi -> selesai</i></strong>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>  
+            <!--[if mso | IE]>
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 
         <tr>
+          
       
             <td
                class="" style="vertical-align:top;width:600px;"
@@ -412,10 +425,10 @@
                     <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                       <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                         <tr>
-                          <td style="width: 50px">
+                          <td style="width: 50px;padding:10px">
                             <img src="{{ url('frontend/images/Icon_LB_C_H.png')}}" width="50px">
                           </td>
-                          <td align="">&nbsp; support@invisign.id <br>&nbsp; 021-00-000-000 </td>
+                          <td align="" style="padding:10px">&nbsp; support@invisign.id <br>&nbsp; 085227408187 </td>
                         </tr>
                       </table>
                     </td>

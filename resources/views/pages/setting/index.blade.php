@@ -59,6 +59,12 @@
                                 Dashboard Admin
                             </a>
                             @endif
+                            @if (Route::has('password.request'))
+                                        <a class="btn btn-edit" 
+                                            href="{{ route('password.request') }}">
+                                            {{ __('Reset Password?') }}
+                                        </a>
+                                    @endif
                             <form class="form-inline " action="{{ url('logout')}}" method="POST">
                                 @csrf
                                 <button class="btn btn-danger my-2 my-sm-0" type="submit"><i class="fa fa-sign-out"></i>&nbsp;Keluar</button>

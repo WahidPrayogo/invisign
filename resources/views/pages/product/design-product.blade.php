@@ -13,7 +13,7 @@
             <div class="container">
               <div class="row">
                 <div class="text-center title ">
-                  <h1>Catalog Design Produk</h1>
+                  <h1>Catalog Produk</h1>
                 </div>
               </div>     
             </div>
