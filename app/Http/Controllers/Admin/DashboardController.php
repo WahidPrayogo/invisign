@@ -11,11 +11,19 @@ class DashboardController extends Controller
 {
     public function index(Request $request)
     {
+        if(Transaction::count() == null){
+            $pending = 0;
+            $success = 0;
+        } else {
+            $pending = Transaction::where('transaction_status', 'PENDING')->count();
+            $success = Transaction::where('transaction_status', 'SUCCESS')->count();
+        }
+
         return view('pages.admin.dashboard', [
             'product_detail' => ProductDetail::count(), // model
             'transaction' => Transaction::count(), // model
-            'transaction_pending' => Transaction::where('transaction_status', 'PENDING')->count(), // model
-            'transaction_success' => Transaction::where('transaction_status', 'SUCCESS')->count(), // model
+            'transaction_pending' => $pending, // model
+            'transaction_success' => $success, // model
         ]);
     }
 }

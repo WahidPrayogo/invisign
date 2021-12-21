@@ -18,7 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('product_details_id');
             $table->integer('users_id')->nullable();
             $table->integer('transaction_total');
-            $table->string('stransaction_status');
+            $table->string('transaction_status');
             $table->softDeletes();
             $table->timestamps();
         });

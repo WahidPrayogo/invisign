@@ -21,7 +21,7 @@ class CreateProductTypesTable extends Migration
             $table->string('feature_2');
             $table->string('feature_3')->nullable();
             $table->string('feature_4')->nullable();
-            $table->string('feature_5')->nullable();
+            $table->integer('initial_price')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

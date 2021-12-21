@@ -801,6 +801,10 @@ color: white;
   color: white;
 }
 
+.section-order .detail-order .img-detail-mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 400px) {
   .section-order {
     border-top-right-radius: 0%;

@@ -65,7 +65,7 @@
                   </tr>
                 </tbody>
               </table>
-              <div class="payment px-2 ""><i>
+              <div class="payment px-2 "><i>
                 Pembayaran bisa melalui rek berikut
                 <p>BRI 682201000466503 a/n <strong>WAHID PRAYOGO</strong>
                 </p></i>
